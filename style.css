@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+header {
+    background-color: rgb(7, 7, 18);
+}
+
+header > h1 {
+    color: white
+}
+
+header > h2 {
+    color: gray;
+}
+
+.wave {
+    margin-top: -1rem;
+    margin-bottom: -5rem;
+}
+
+section > div {
+    height: 14em;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    section > div {
+        height: 10em;
+    }
+  }
+
+section > div > a {
+    height: 100%;
+}
+
+section > div > a > button#htmlButton{
+    background-color: rgb(232, 255, 119) !important;
+}
+
+section > div > a > button#cssButton {
+    background-color: rgb(255, 214, 118) !important;
+}
+
+section > div > a > button#jsButton {
+    background-color: rgb(143, 255, 123) !important;
+}
