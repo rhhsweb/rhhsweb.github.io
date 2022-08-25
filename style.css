@@ -4,50 +4,141 @@
     margin: 0;
 }
 
+/* html {
+    height: 100vh;
+} */
 body {
-    background-color: aliceblue;
+    background-color: rgb(0, 11, 24);
 }
+html, body {
+    min-height: 100%;
+    max-width: 100%;
+}
+/* .background {
+    position: fixed;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(30deg, rgb(0, 11, 24), rgb(0, 82, 162));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 100%;
+    background-size: 100%;
+} */
 
 header {
-    background-color: rgb(7, 7, 18);
+    color: white;
+    text-align: center;
 }
 
-header > h1 {
-    color: white
+img {
+    width: 60%;
+    min-height: 100%;
 }
 
-header > h2 {
-    color: gray;
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 3rem;
+    text-align: left;
 }
 
-.wave {
-    margin-top: -1rem;
-    margin-bottom: -5rem;
+h2 {
+    text-align: left;
+    opacity: 0.75;
+    font-family: monospace;
+}
+
+p {
+    font-size: 2rem;
+    text-align: left;
+    opacity: 0.75;
+    border-right: solid 3px rgba(255, 255, 255, .75);
+    border-left: solid 3px rgba(0, 0, 0, 0);
+    display: inline !important; 
+    width: auto;
+    padding-right: 3px;
+
+    /* Animation */
+    animation: animated-cursor 1s infinite;
+    animation-delay: 2300ms;
+}
+
+@keyframes animated-cursor {
+    50% {
+        border-right-color: transparent;
+    }
 }
 
 section > div {
-    height: 14em;
+    /* height: 14em; */
 }
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    section > div {
-        height: 10em;
-    }
-  }
-
-section > div > a {
+.container > div > div > a {
     height: 100%;
 }
 
-section > div > a > button#htmlButton{
-    background-color: rgb(232, 255, 119) !important;
+.container > div > div > a > button{
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: 0 0 4px #000;
+    transition: 0.3s;
 }
 
-section > div > a > button#cssButton {
-    background-color: rgb(255, 214, 118) !important;
+button:hover {
+    opacity: 0.8;
+    transform: scale(0.95);
 }
 
-section > div > a > button#jsButton {
-    background-color: rgb(143, 255, 123) !important;
+a > button > h3, h5 {
+    font-weight: bold;
+}
+
+a > button > h3 {
+    font-size: 2rem;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: inherit;
+}
+
+/*
+Colours from:
+https://miro.medium.com/max/875/1*R-jHL4YAaVYGYhR7L68Hrg.png
+ */
+#htmlButton{
+    background-color: rgba(222,102,104,255) !important;
+}
+
+#cssButton {
+    background-color: rgba(255,194,113,255) !important;
+}
+
+#jsButton {
+    background-color: rgba(102,169,237,255) !important;
+} 
+
+/* Media queries */
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    h1, h2, p {
+        text-align: center;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    section > div {
+        height: 10em;
+    }
+    .container > div > div > a > button{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px){
+    img {
+        width: 100%;
+    }
 }
