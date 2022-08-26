@@ -6,6 +6,7 @@
 
 body {
     background-color: rgb(0, 11, 24);
+    overflow-x: hidden;
 }
 html, body {
     min-height: 100%;
@@ -38,8 +39,9 @@ h2 {
 p {
     font-size: 2rem;
     text-align: left;
-    opacity: 0.75;
-    border-right: solid 3px rgba(255, 255, 255, .75);
+    /* opacity: 0.75; */
+    color: rgb(138, 143, 149);
+    border-right: solid 3px rgb(138, 143, 149);
     border-left: solid 3px rgba(0, 0, 0, 0);
     display: inline !important; 
     width: auto;
@@ -66,10 +68,12 @@ p {
     font-family: "Montserrat", sans-serif;
     box-shadow: 0 0 4px #000;
     transition: 0.3s;
+
+    opacity: 0;
 }
 
 button:hover {
-    opacity: 0.8;
+    opacity: 0.8 !important;
     transform: scale(0.95);
 }
 
@@ -91,15 +95,36 @@ https://miro.medium.com/max/875/1*R-jHL4YAaVYGYhR7L68Hrg.png
  */
 #htmlButton{
     background-color: rgba(222,102,104,255) !important;
+    animation: fade-in 2s forwards;
 }
 
 #cssButton {
     background-color: rgba(255,194,113,255) !important;
+    animation: fade-in 2s forwards;
+    animation-delay: 500ms;
 }
 
 #jsButton {
     background-color: rgba(102,169,237,255) !important;
+    animation: fade-in 2s forwards;
+    animation-delay: 1s;
 } 
+
+@keyframes fade-in {
+    from { opacity: 0;}
+    to   { opacity: 1;}
+}
+
+/* Firefly animation */
+.unit {
+    position: absolute;
+    z-index: -1;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 200, 255);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 200, 255);
+}
 
 /* Media queries */
 @media only screen and (max-width: 768px) {
