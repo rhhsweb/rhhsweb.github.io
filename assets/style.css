@@ -4,9 +4,6 @@
     margin: 0;
 }
 
-/* html {
-    height: 100vh;
-} */
 body {
     background-color: rgb(0, 11, 24);
 }
@@ -14,18 +11,6 @@ html, body {
     min-height: 100%;
     max-width: 100%;
 }
-/* .background {
-    position: fixed;
-    height: 100%;
-    z-index: -1;
-    background-image: linear-gradient(30deg, rgb(0, 11, 24), rgb(0, 82, 162));
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    max-width: 100%;
-    background-size: 100%;
-} */
 
 header {
     color: white;
@@ -69,10 +54,6 @@ p {
     50% {
         border-right-color: transparent;
     }
-}
-
-section > div {
-    /* height: 14em; */
 }
 
 .container > div > div > a {
@@ -131,6 +112,9 @@ https://miro.medium.com/max/875/1*R-jHL4YAaVYGYhR7L68Hrg.png
     }
     section > div {
         height: 10em;
+    }
+    section {
+        margin-bottom: 450px;
     }
     .container > div > div > a > button{
         padding-top: 2rem;
