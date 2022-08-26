@@ -30,8 +30,8 @@ changeNum(check);
 function createUnit() {
     let unit = document.createElement("div");
     w = window.innerWidth;
-    h = document.body.scrollHeight; // Entire document height
-    // h = container.offsetHeight; // Only header height
+    // h = document.body.scrollHeight-50; // Entire document height
+    h = container.offsetHeight; // Only header height
     unit.classList.add("unit");
     container.appendChild(unit);
 
