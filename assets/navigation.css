@@ -1,0 +1,23 @@
+/* Make sure navbar doesn't overlap page content */
+body {
+    padding-top: 70px; 
+}
+
+nav {
+    background-color: rgb(26,26,26);
+    box-sizing: border-box;
+}
+
+nav img {
+    height: 52px;
+}
+
+nav div {
+    color: rgb(230, 230, 230);
+}
+
+@media only screen and (max-width: 320px) {
+    nav h4 {
+        display: none;
+    }
+}
