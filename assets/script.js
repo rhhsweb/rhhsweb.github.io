@@ -1,6 +1,6 @@
 // Typing Animation
 const typingElement = document.getElementById("typing-animation");
-const sentence = "earn Web Development";
+const sentence = "Learn Web Development";
 let letter = 0;
 const animation = setInterval(()=> {
     typingElement.textContent += sentence[letter++];
