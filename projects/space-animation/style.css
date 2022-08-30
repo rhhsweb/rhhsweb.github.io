@@ -1,0 +1,91 @@
+body {
+    height: 100vh;
+    /* Stars */
+    background-image: url("./star-background.png");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.container {   
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Center items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.earth {
+    max-width: 25%;
+    max-height: 25%;
+    border-radius: 50%;
+    /* Spinning and Glowing animation */
+    animation-name:                spin, earth-glow;
+    animation-duration:             10s, 5s;
+    animation-timing-function:   linear, ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.moon-container {
+    height: 100%;
+    /* Rotating animation */
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+.moon {
+    position: relative;
+    margin: auto;
+    top: 20%;
+    max-width: 10vw;
+    max-height: 10vh;
+    border-radius: 50%;
+    /* Glowing Animation */
+    animation-name: moon-glow;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+/* Move moon closer to earth on smaller screens */
+@media only screen and (max-width: 700px) {
+    .moon {
+        top: 25%;
+    }
+}
+
+@media only screen and (max-width: 550px) and (min-height: 600px) {
+    .moon {
+        top: 30%;
+    }
+}
+
+@media only screen and (max-width: 400px)  and (min-height: 600px) {
+    .moon {
+        top: 35%;
+    }
+}
+
+/* Spin animation */
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/* Glowing animation */
+@keyframes earth-glow {
+    0% {box-shadow: 0 0 5px 2px rgba(0, 200, 255, 0);}
+    50% {box-shadow: 0 0 10px 4px rgba(0, 200, 255, 0.7);}
+    100% {box-shadow: 0 0 5px 2px rgba(0, 200, 255, 0);}
+}
+
+@keyframes moon-glow {
+    0% {box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0);}
+    50% {box-shadow: 0 0 10px 4px rgba(255, 255, 255, 0.7);}
+    100% {box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0);} 
+}
