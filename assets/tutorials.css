@@ -1,0 +1,8 @@
+#page-wrapper {
+	position: absolute;
+	max-width: 60vw;
+	left: 20vw;
+	margin: inherit auto;
+	padding: 0;
+}
+
