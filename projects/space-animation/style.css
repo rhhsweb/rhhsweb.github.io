@@ -59,7 +59,7 @@ body {
     }
 }
 
-@media only screen and (max-width: 550px) and (min-height: 600px) {
+@media only screen and (max-width: 550px) and (min-height: 750px) {
     .moon {
         top: 30%;
     }
@@ -67,7 +67,7 @@ body {
 
 @media only screen and (max-width: 400px)  and (min-height: 600px) {
     .moon {
-        top: 35%;
+        top: 31%;
     }
 }
 
