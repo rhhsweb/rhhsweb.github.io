@@ -1,23 +1,59 @@
 /* Make sure navbar doesn't overlap page content */
 body {
     padding-top: 70px; 
+	scroll-padding-top: 70px;
 }
 
-nav {
+#top-navbar {
     background-color: rgb(26,26,26);
     box-sizing: border-box;
+	height: 70px;
 }
 
-nav img {
+#top-navbar img {
     height: 52px;
 }
 
-nav div {
+#top-navbar div {
     color: rgb(230, 230, 230);
 }
 
+* {
+	 border: 1px solid black; 
+}
+
+#side-navbar {
+	position: fixed;
+	top: 70px;
+	left: 0px;
+	width: 200px;
+	height: calc(100vh - 70px);
+	margin-top: 30px;
+}
+
+#side-navbar header {
+	font-size: 20px;
+}
+
+#side-navbar li {
+	list-style: none;
+}
+
+#side-bar a {
+	text-decoration: none;
+	color: black;
+}
+
+#side-bar a:hover {
+	text-decoration: underline;
+}
+
+.active {
+	font-weight: bold;
+}
+
 @media only screen and (max-width: 320px) {
-    nav h4 {
+    #top-navbar h4 {
         display: none;
     }
 }
