@@ -1,8 +1,16 @@
 #page-wrapper {
 	position: absolute;
-	max-width: 60vw;
-	left: 20vw;
-	margin: inherit auto;
-	padding: 0;
+	width: calc(100vw - 250px);
+	left: 250px;
+	top: 70px;
+}
+
+#page-wrapper > * {
+	margin: auto;
+	width: 80%;
+}
+
+* {
+	/*border: 1px solid black;*/
 }
 
