@@ -2,33 +2,45 @@
 body {
     padding-top: 70px; 
 	scroll-padding-top: 70px;
-	padding: 0;
-	margin: 0;
 }
 
-#top-navbar {
-    background-color: rgb(26,26,26);
-    box-sizing: border-box;
-	height: 70px;
+#side-bar {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 250px;
+	height: 100vh;
+	border-right: 2px solid black;
+	padding-top: 20px;
 }
 
-#top-navbar img {
+#side-bar-header {
+	width: 250px;
+	height: 56px;
+}
+
+#side-bar-header a {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	text-decoration: none;
+	color: black;
+}
+
+#side-bar-header img {
     height: 52px;
 }
 
-#top-navbar div {
-    color: rgb(230, 230, 230);
+#side-bar-header h4 {
+	margin-bottom: 0;
+	width: 150px;
 }
 
 #side-navbar {
-	position: fixed;
-	top: 70px;
-	left: 0px;
-	width: 250px;
-	height: calc(100vh - 70px);
+	width: 100%;
+	height: calc(100vh - 56px);
 	padding-top: 20px;
 	padding-left: 20px;
-	border-right: 2px solid black;
 }
 
 #side-navbar header {
@@ -39,12 +51,12 @@ body {
 	list-style: none;
 }
 
-#side-bar a {
+#side-navbar a {
 	text-decoration: none;
 	color: black;
 }
 
-#side-bar a:hover {
+#side-navbar a:hover {
 	text-decoration: underline;
 }
 
@@ -52,8 +64,18 @@ body {
 	font-weight: bold;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 480px) {
     #top-navbar h4 {
         display: none;
     }
+
+	#side-bar {
+		padding-top: 0;
+		position: static;
+		display: block;
+		height: 100vh;
+		width: 100vw;
+		border-right: none;
+		border-bottom: 2px solid black;
+	}
 }

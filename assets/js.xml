@@ -20,16 +20,14 @@
 		<meta name="theme-color" content="#ffffff" />`
 	</head>
 	<div id="top-bar">
-		<nav class="navbar fixed-top" id="top-navbar">
-			<div class="container px-5">
-				<a href="/">
-					<img src="/assets/site-logo.png" />
-				</a>
-				<h4>RHHS Web Development</h4>
-			</div>
-		</nav>
 	</div>
 	<div id="side-bar">
+		<div id="side-bar-header">
+			<a href="/">
+				<img src="/assets/site-logo.png" />
+				<h4>RHHS Web Development</h4>
+			</a>
+		</div>
 		<nav id="side-navbar">
 			<a href="/tutorials/js">JavaScript</a>
 			<div>

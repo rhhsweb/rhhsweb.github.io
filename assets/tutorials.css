@@ -5,12 +5,25 @@
 	top: 70px;
 }
 
-#page-wrapper > * {
+#content {
 	margin: auto;
 	width: 80%;
 }
 
 * {
 	/*border: 1px solid black;*/
+}
+
+@media only screen and (max-width: 480px) {
+	#page-wrapper {
+		position: static;
+		left: 0;
+		width: 100%;
+		padding: 0 !important;
+	}
+
+	#content {
+		width: 100%;
+	}
 }
 
