@@ -1,49 +1,46 @@
 <?xml version="1.0" ?>
 <root>
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="x-ua-compatible" content="ie=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- stylesheets -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
-		<link rel="stylesheet" href="/assets/navigation.css" />
-		<link rel="stylesheet" href="/assets/tutorials.css" />
-		<style>
-		.active {
-			color: rgb(102,169,237) !important;
-		}
-		</style>
-	</head>
-	<div id="top-bar">
-	</div>
-	<div id="side-bar">
-		<div id="side-bar-header">
-			<a href="/">
-				<img src="/assets/site-logo.png" />
-				<h4>RHHS Web Development</h4>
-			</a>
-		</div>
-		<nav id="side-navbar">
-			<a href="/tutorials/js">JavaScript</a>
-			<div>
-				<header>JS</header>
-				<ul>
-					<li><a href="/tutorials/js/lesson-1">Adding JavaScript</a></li>
-					<li><a href="/tutorials/js/lesson-2">Alerts</a></li>
-					<li><a href="/tutorials/js/lesson-3">DOM Manipulation</a></li>
-					<li><a href="/tutorials/js/lesson-4">Events</a></li>
-					<li><a href="/tutorials/js/lesson-5">Window</a></li>
-					<li><a href="/tutorials/js/lesson-6">Timers</a></li>
-					<li><a href="/tutorials/js/lesson-7">Storages</a></li>
-				</ul>
-			</div>
-			<div>
-				<header>AJAX</header>
-				<ul>
-					<li><a href="/tutorials/js/lesson-8">AJAX</a></li>
-				</ul>
-			</div>
-		</nav>
-	</div>
+        <!-- stylesheets -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/assets/navigation.css" />
+        <link rel="stylesheet" href="/assets/tutorials.css" />
+    </head>
+    <div id="top-bar">
+        <a class="button left js-tutorial" href="/tutorials/js">Previous</a>
+        <a class="button right js-tutorial" href="/tutorials/js">Next</a>
+    </div>
+    <div id="side-bar">
+        <div id="side-bar-header">
+            <a href="/">
+                <img src="/assets/site-logo-inverted.png" />
+                <h4>RHHS Web Development</h4>
+            </a>
+        </div>
+        <nav id="side-navbar">
+            <a class="nav-link js-tutorial" href="/tutorials/js">JavaScript</a>
+            <div>
+                <header>JS</header>
+                <ul>
+                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-1">Adding JavaScript</a></li>
+                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-2">Alerts</a></li>
+                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-3">DOM Manipulation</a></li>
+                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-4">Events</a></li>
+                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-5">Window</a></li>
+                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-6">Timers</a></li>
+                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-7">Storages</a></li>
+                </ul>
+            </div>
+            <div>
+                <header>AJAX</header>
+                <ul>
+                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-8">AJAX</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </root>
