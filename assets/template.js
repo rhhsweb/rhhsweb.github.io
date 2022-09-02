@@ -88,7 +88,7 @@ function setPrevNextButtons() {
                 break;
         }
     } else if (lessonNum === 1) {
-        leftButton.setAttribute("href", `tutorials/${lessonType}`);
+        leftButton.setAttribute("href", `/tutorials/${lessonType}`);
         rightButton.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum + 1}`);
     } else if (lessonNum === numLessons[lessonType]) {
         leftButton.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum - 1}`);
@@ -111,7 +111,7 @@ function setPrevNextButtons() {
                 break;
         }
     } else {
-        leftButton.setAttribute("href", `tutorials/${lessonType}/lesson-${lessonNum - 1}`);
+        leftButton.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum - 1}`);
         rightButton.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum + 1}`);
     }
 }
