@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="/assets/tutorials.css" />
     </head>
     <div id="top-bar">
-        <a class="button left html-tutorial" href="/tutorials/html">Previous</a>
-        <a class="button right html-tutorial" href="/tutorials/html">Next</a>
+        <a href="/tutorials/html"><button class="button left html-tutorial">Previous</button></a>
+        <a href="/tutorials/html"><button class="button right html-tutorial">Next</button></a>
     </div>
     <div id="side-bar">
         <div id="side-bar-header">

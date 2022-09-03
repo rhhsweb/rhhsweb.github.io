@@ -1,40 +1,27 @@
 // Adds the header, top bar, side bar, and active class to tutorial pages.
 function useAll() {
-    useTemplate(getLessonType());
+    useTemplate();
     selectActiveLesson();
     setPrevNextButtons();
 }
 
 // Adds the header, top bar, and side bar to tutorial pages.
-function useTemplate(type) {
-    type = type.toLowerCase();
+function useTemplate() {
+    let type = getLessonType();
 
-    let valid = new Array("html", "css", "js").includes(type);
-    if (!valid) {
-        throw `Error: invalid tutorial type (${type})`;
+    let key = `${type}-text`;
+    if (!sessionStorage.getItem(key)) {
+        loadDoc(`/assets/${type}.xml`, function(xhttp) {
+            let xmlText = xhttp.responseText;
+            sessionStorage.setItem(key, xmlText);
+            writeTemplateToPage(xhttp.responseXML);
+        });
+    } else {
+        let parser = new DOMParser();
+        let xmlText = sessionStorage.getItem(key);
+        let xmlDoc = parser.parseFromString(xmlText, "text/xml");
+        writeTemplateToPage(xmlDoc);
     }
-
-    loadDoc(`/assets/${type}.xml`, function(xhttp) {
-        const xmlDoc = xhttp.responseXML;
-
-        let headElem = document.getElementsByTagName("head").item(0);
-        let headData = xmlDoc.getElementsByTagName("head").item(0);
-        if (headElem && headData) {
-            headElem.innerHTML =  headData.innerHTML + headElem.innerHTML;
-        }
-
-        let topBarElem = document.getElementById("top-bar");
-        let topBarData = xmlDoc.getElementById("top-bar");
-        if (topBarElem && topBarData) {
-            topBarElem.innerHTML = topBarData.innerHTML + topBarElem.innerHTML;
-        }
-
-        let sideBarElem = document.getElementById("side-bar");
-        let sideBarData = xmlDoc.getElementById("side-bar");
-        if (sideBarElem && sideBarData) {
-            sideBarElem.innerHTML = sideBarData.innerHTML + sideBarElem.innerHTML;
-        }
-    });
 }
 
 // Add the 'active' class to relevant html elements in the navbar.
@@ -67,52 +54,54 @@ function setPrevNextButtons() {
 
     let leftButton = document.querySelector('.button.left');
     let rightButton = document.querySelector('.button.right');
+    let leftAnchor = leftButton.parentNode;
+    let rightAnchor = rightButton.parentNode;
     if (lessonNum === 0) {
         leftButton.classList.remove(`${lessonType}-tutorial`);
-        rightButton.setAttribute("href", `/tutorials/${lessonType}/lesson-1`);
+        rightAnchor.setAttribute("href", `/tutorials/${lessonType}/lesson-1`);
 
         switch (lessonType) {
             case "html":
                 leftButton.innerHTML = "Home";
-                leftButton.setAttribute("href", "/");
+                leftAnchor.setAttribute("href", "/");
                 break;
             case "css":
                 leftButton.innerHTML = "HTML";
-                leftButton.setAttribute("href", `/tutorials/html/lesson-${numLessons["html"]}`);
+                leftAnchor.setAttribute("href", `/tutorials/html/lesson-${numLessons["html"]}`);
                 leftButton.classList.add("html-tutorial");
                 break;
             case "js":
                 leftButton.innerHTML = "CSS";
-                leftButton.setAttribute("href", `/tutorials/css/lesson-${numLessons["css"]}`);
+                leftAnchor.setAttribute("href", `/tutorials/css/lesson-${numLessons["css"]}`);
                 leftButton.classList.add("css-tutorial");
                 break;
         }
     } else if (lessonNum === 1) {
-        leftButton.setAttribute("href", `/tutorials/${lessonType}`);
-        rightButton.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum + 1}`);
+        leftAnchor.setAttribute("href", `/tutorials/${lessonType}`);
+        rightAnchor.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum + 1}`);
     } else if (lessonNum === numLessons[lessonType]) {
-        leftButton.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum - 1}`);
+        leftAnchor.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum - 1}`);
         rightButton.classList.remove(`${lessonType}-tutorial`);
 
         switch (lessonType) {
             case "html":
                 rightButton.innerHTML = "CSS";
-                rightButton.setAttribute("href", "/tutorials/css");
+                rightAnchor.setAttribute("href", "/tutorials/css");
                 rightButton.classList.add("css-tutorial");
                 break;
             case "css":
                 rightButton.innerHTML = "JS";
-                rightButton.setAttribute("href", "/tutorials/js");
+                rightAnchor.setAttribute("href", "/tutorials/js");
                 rightButton.classList.add("js-tutorial");
                 break;
             case "js":
                 rightButton.innerHTML = "Home";
-                rightButton.setAttribute("href", "/");
+                rightAnchor.setAttribute("href", "/");
                 break;
         }
     } else {
-        leftButton.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum - 1}`);
-        rightButton.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum + 1}`);
+        leftAnchor.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum - 1}`);
+        rightAnchor.setAttribute("href", `/tutorials/${lessonType}/lesson-${lessonNum + 1}`);
     }
 }
 
@@ -130,6 +119,27 @@ function loadDoc(url, callback) {
 
     xhttp.open("GET", url, false); // must be synchronous for selectActiveLesson()
     xhttp.send();
+}
+
+// adds HTML from template to webpage.
+function writeTemplateToPage(xmlDoc) {
+    let headElem = document.getElementsByTagName("head").item(0);
+    let headData = xmlDoc.getElementsByTagName("head").item(0);
+    if (headElem && headData) {
+        headElem.innerHTML =  headData.innerHTML + headElem.innerHTML;
+    }
+
+    let topBarElem = document.getElementById("top-bar");
+    let topBarData = xmlDoc.getElementById("top-bar");
+    if (topBarElem && topBarData) {
+        topBarElem.innerHTML = topBarData.innerHTML + topBarElem.innerHTML;
+    }
+
+    let sideBarElem = document.getElementById("side-bar");
+    let sideBarData = xmlDoc.getElementById("side-bar");
+    if (sideBarElem && sideBarData) {
+        sideBarElem.innerHTML = sideBarData.innerHTML + sideBarElem.innerHTML;
+    }
 }
 
 // Get the tutorial lesson type using the path name.
