@@ -34,5 +34,9 @@
         width: 100%;
         padding: 0 !important;
     }
+
+    #content {
+        padding-top: 28px;
+    }
 }
 

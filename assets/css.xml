@@ -17,12 +17,10 @@
     </div>
     <aside id="side-bar">
         <div id="side-bar-header">
-            <a href="/">
-                <img src="/assets/site-logo-inverted.png" />
-                <h4>RHHS Web Development</h4>
-            </a>
+            <a href="/"><img src="/assets/site-logo-inverted.png" /></a>
+            <a href="/"><h4>RHHS Web Development</h4></a>
+            <a class="fa-solid fa-bars" id="navbar-collapse" href="#side-navbar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="side-navbar"> </a>
         </div>
-        <a class="fa-solid fa-bars" id="navbar-collapse" href="#side-navbar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="side-navbar"> </a>
         <nav id="side-navbar" class="collapse show">
             <a class="nav-link css-tutorial" href="/tutorials/css">CSS</a>
             <div>
