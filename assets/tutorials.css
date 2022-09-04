@@ -10,10 +10,7 @@
     margin: auto;
     width: 70%;
     min-width: 520px;
-}
-
-* {
-    /* border: 1px solid black;pre */
+    max-width: 720px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -24,6 +21,15 @@
         min-width: 0px;
     }
 }
+
+#content a:visited {
+    color: purple;
+}
+
+#content a:hover {
+    text-decoration: none;
+}
+
 
 /* Mobile layout */
 

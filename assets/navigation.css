@@ -110,7 +110,7 @@ body {
     font-weight: bold;
 }
 
-/* Page-specific css */
+/* Page-specific CSS */
 
 .active.html-tutorial {
     color: rgb(222, 102, 104) !important;
@@ -151,11 +151,11 @@ body {
         height: initial;
         overflow: auto;
         border-right: none;
-        border-bottom: 2px solid black;
+        text-align: center;
     }
 
     #side-bar-header {
-        margin-bottom: 20px;
+        margin-bottom: 5px;
     }
 
     #navbar-collapse {
@@ -164,5 +164,15 @@ body {
         text-align: center;
         color: white !important;
         text-decoration: none;
+    }
+
+    #side-navbar {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #side-navbar * {
+        padding-left: 0;
+        margin-top: 3px;
     }
 }
