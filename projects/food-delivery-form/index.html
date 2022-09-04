@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Order Form Project | RHHS Web Development</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form>
+        <!-- Header image -->
+        <div>
+            <img src="pizza.jpg" alt="pizza">
+        </div>
+
+        <!-- Title and Description -->
+        <section>
+            <h1>Online Pizza Order</h1>
+            <p>Have freshly cooked pizza delivered to your doorstep.</p>
+        </section>
+
+        <!-- Item Name -->
+        <section>
+            <h4>Item Name</h4>
+            <input type="text" placeholder="Your answer">
+        </section>
+
+        <!-- Item Size -->
+        <section>
+            <h4>Item Size</h4>
+            <input type="radio" name="size" id="small">
+            <label for="small">Small</label><br>
+
+            <input type="radio" name="size" id="medium">
+            <label for="medium">Medium</label><br>
+
+            <input type="radio" name="size" id="large">
+            <label for="large">Large</label><br>
+        </section>
+
+        <!-- Date of Delivery -->
+        <section>
+            <h4>Date of Delivery</h4>
+            <input type="date">
+            <input type="time">
+        </section>
+
+        <!-- Postal Code -->
+        <section>
+            <h4>Postal Code</h4>
+            <input type="text" placeholder="Your answer">
+        </section>
+
+        <!-- Toppings -->
+        <section>
+            <h4>Toppings</h4>
+            <input type="checkbox" id="topping-1">
+            <label for="topping-1">Pepperoni</label><br>
+            
+            <input type="checkbox" id="topping-2">
+            <label for="topping-2">Mushroom</label><br>
+            
+            <input type="checkbox" id="topping-3">
+            <label for="topping-3">Extra Cheese</label><br>
+
+            <input type="checkbox" id="topping-4">
+            <label for="topping-4">Sausage</label><br>
+
+            <input type="checkbox" id="topping-5">
+            <label for="topping-5">Onion</label><br>
+
+            <input type="checkbox" id="topping-6">
+            <label for="topping-6">Black Olives</label><br>
+
+            <input type="checkbox" id="topping-7">
+            <label for="topping-7">Green Pepper</label><br>
+
+            <input type="checkbox" id="topping-8">
+            <label for="topping-8">Fresh Garlic</label><br>
+
+            <input type="checkbox" id="topping-9">
+            <label for="topping-9">Tomato</label><br>
+
+            <input type="checkbox" id="topping-10">
+            <label for="topping-10">Fresh Basil</label><br>
+        </section>
+
+        <!-- Tip Amount -->
+        <section>
+            <h4>Tip Amount</h4>
+            <select>
+                <option>None</option>
+                <option>5%</option>
+                <option>10%</option>
+                <option selected>13%</option>
+                <option>20%</option>
+            </select>
+        </section>
+
+        <!-- Additional Comments -->
+        <section>
+            <h4>Additional Comments</h4>
+            <textarea rows="4" placeholder="Your Answer"></textarea>
+        </section>
+
+        <!-- Submit and Reset -->
+        <div>
+            <input type="submit">
+            <input type="reset">
+        </div>
+
+    </form>
+</body>
+</html>
