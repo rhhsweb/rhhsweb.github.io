@@ -1,12 +1,5 @@
 // Adds the header, top bar, side bar, and active class to tutorial pages.
 function useAll() {
-    useTemplate();
-    selectActiveLesson();
-    setPrevNextButtons();
-}
-
-// Adds the header, top bar, and side bar to tutorial pages.
-function useTemplate() {
     let type = getLessonType();
 
     let key = `${type}-text`;
@@ -14,13 +7,19 @@ function useTemplate() {
         loadDoc(`/assets/${type}.xml`, function(xhttp) {
             let xmlText = xhttp.responseText;
             sessionStorage.setItem(key, xmlText);
+
             writeTemplateToPage(xhttp.responseXML);
+            selectActiveLesson();
+            setPrevNextButtons();
         });
     } else {
         let parser = new DOMParser();
         let xmlText = sessionStorage.getItem(key);
         let xmlDoc = parser.parseFromString(xmlText, "text/xml");
+        
         writeTemplateToPage(xmlDoc);
+        selectActiveLesson();
+        setPrevNextButtons();
     }
 }
 
@@ -46,7 +45,7 @@ function setPrevNextButtons() {
     const numLessons = {
         html: 10,
         css: 12,
-        js: 8
+        js: 7
     };
 
     let lessonNum = getLessonNum();
@@ -117,7 +116,7 @@ function loadDoc(url, callback) {
         }
     };
 
-    xhttp.open("GET", url, false); // must be synchronous for selectActiveLesson()
+    xhttp.open("GET", url, true); // must be synchronous for selectActiveLesson()
     xhttp.send();
 }
 
@@ -139,6 +138,21 @@ function writeTemplateToPage(xmlDoc) {
     let sideBarData = xmlDoc.getElementById("side-bar");
     if (sideBarElem && sideBarData) {
         sideBarElem.innerHTML = sideBarData.innerHTML + sideBarElem.innerHTML;
+    }
+
+    let scriptsElem = document.getElementById("scripts");
+    let scriptsData = xmlDoc.getElementById("scripts");
+    if (scriptsElem && scriptsData) {
+        let tmp = scriptsElem.innerHTML;
+        scriptsElem.innerHTML = scriptsData.innerHTML;
+        Array.from(scriptsElem.querySelectorAll("script")).forEach( oldScript => {
+            const newScript = document.createElement("script");
+            Array.from(oldScript.attributes)
+                .forEach( attr => newScript.setAttribute(attr.name, attr.value) );
+            newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+        });
+        scriptsData.innerHTML = tmp + scriptsElem.innerHTML;
     }
 }
 
