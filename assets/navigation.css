@@ -7,8 +7,10 @@ body {
 /* Top bar */
 
 #top-bar {
-    float: right;
-    width: calc(100vw - 265px);
+    position: absolute;
+    top: 0px;
+    left: 265px;
+    width: calc(100% - 265px);
     height: 70px;
     background-color: #e6e6e6;
     padding: 10px 40px;
@@ -138,7 +140,7 @@ body {
 
 /* Mobile layout */
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 600px) {
     #top-bar {
         display: none;
     }

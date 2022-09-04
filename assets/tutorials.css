@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 #page-wrapper {
     position: absolute;
     width: calc(100vw - 265px);
@@ -10,8 +14,10 @@
     margin: auto;
     width: 70%;
     min-width: 520px;
-    max-width: 720px;
+    max-width: 780px;
 }
+
+/* Small width layout */
 
 @media only screen and (max-width: 800px) {
     #content {
@@ -22,10 +28,6 @@
     }
 }
 
-#content a:visited {
-    color: purple;
-}
-
 #content a:hover {
     text-decoration: none;
 }
@@ -33,7 +35,7 @@
 
 /* Mobile layout */
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 600px) {
     #page-wrapper {
         position: static;
         left: 0;
