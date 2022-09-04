@@ -1,30 +1,72 @@
 /* Make sure navbar doesn't overlap page content */
 body {
-    padding-top: 70px; 
-	scroll-padding-top: 70px;
+    scroll-padding-top: 70px;
+    height: 100vh;
 }
 
+/* Top bar */
+
+#top-bar {
+    float: right;
+    width: calc(100vw - 265px);
+    height: 70px;
+    background-color: #e6e6e6;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    color: rgb(0, 11, 24);
+	background-color: #aaaaaa;
+    width: 80px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+#top-bar a {
+    text-decoration: none !important;
+}
+
+.button:hover {
+    filter: brightness(0.9);
+    transform: scale(0.92);
+    transition: 0.1s;
+}
+
+/* Side bar */
+
 #side-bar {
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	width: 250px;
-	height: 100vh;
-	border-right: 2px solid black;
-	padding-top: 20px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 265px;
+    height: 100vh;
+    padding-top: 20px;
+    background-color: rgb(0, 11, 24);
+    color: white;
 }
 
 #side-bar-header {
-	width: 250px;
-	height: 56px;
+    width: 100%;
+    height: 62px;
 }
 
 #side-bar-header a {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	text-decoration: none;
-	color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    color: white;
+}
+
+#side-bar-header h4:hover {
+    text-decoration: underline;
 }
 
 #side-bar-header img {
@@ -32,50 +74,108 @@ body {
 }
 
 #side-bar-header h4 {
-	margin-bottom: 0;
-	width: 150px;
+    margin-bottom: 0;
+    width: 150px;
+    font-size: 24px;
+}
+
+#navbar-collapse {
+    display: none;
 }
 
 #side-navbar {
-	width: 100%;
-	height: calc(100vh - 56px);
-	padding-top: 20px;
-	padding-left: 20px;
+    width: 100%;
+    padding-top: 15px;
+    padding-left: 20px;
 }
 
 #side-navbar header {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 #side-navbar li {
-	list-style: none;
+    list-style: none;
 }
 
 #side-navbar a {
-	text-decoration: none;
-	color: black;
+    text-decoration: none;
+    color: white;
 }
 
 #side-navbar a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .active {
-	font-weight: bold;
+    font-weight: bold;
 }
 
-@media only screen and (max-width: 480px) {
-    #top-navbar h4 {
+/* Page-specific css */
+
+.active.html-tutorial {
+    color: rgb(222, 102, 104) !important;
+}
+
+.button.html-tutorial {
+    background-color: rgb(222, 102, 104);
+}
+
+.active.css-tutorial {
+    color: rgb(255, 194, 113) !important;
+}
+
+.button.css-tutorial {
+    background-color: rgb(255, 194, 113);
+}
+
+.active.js-tutorial {
+    color: rgb(102, 169, 237) !important;
+}
+
+.button.js-tutorial {
+    background-color: rgb(102, 169, 237);
+}
+
+/* Mobile layout */
+
+@media only screen and (max-width: 560px) {
+    #top-bar {
         display: none;
     }
 
-	#side-bar {
-		padding-top: 0;
-		position: static;
-		display: block;
-		height: 100vh;
-		width: 100vw;
-		border-right: none;
-		border-bottom: 2px solid black;
-	}
+    #side-bar {
+        padding-top: 20px;
+        position: static;
+        display: block;
+        width: 100vw;
+        height: initial;
+        overflow: auto;
+        border-right: none;
+        border-bottom: 2px solid black;
+    }
+
+    #side-bar-header a {
+        justify-content: center;
+    }
+
+    #side-bar-header img {
+        padding: 0px 49px;
+    }
+
+    #side-bar-header h4 {
+        text-align: center;
+    }
+
+    #navbar-collapse {
+        padding: 20px 0;
+        display: block;
+        font-size: 40px;
+        text-align: center;
+        color: white !important;
+        text-decoration: none;
+    }
+
+    #content {
+        padding-top: 28px;
+    }
 }
