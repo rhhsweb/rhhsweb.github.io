@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <title>HTML | RHHS Web Development</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -10,44 +12,59 @@
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
             <div id="content">
-                <h1>HTML</h1>
-                <p>
-                    HTML stands for HyperText Markup Language. It is the language used to describe the overall structure of webpages as well as its contents. 
-                    In comparison, CSS is used to describe the appearance of webpages and JavaScript is used to control the functionality of webpages.
-                </p>
-                <p>
-                    HTML has a fairly long history, dating back to 1993. At the beginning, there was no standard way to display HTML code, meaning websites 
-                    would have to be written differently for different browsers. As time went on, web standards were developed and adopted by browsers. Newer 
-                    versions of HTML were released, adding new features.
-                </p>
-                <p>
-                    All browsers now are capable of running HTML code in more or less the same way. These include Chrome, Safari, Firefox, and more. The most
-                    recent version of HTML is HTML5.
-                </p>
-                <h2>Elements</h2>
-                <p>
-                    At its core, HTML is made of <a href="/tutorials/html/lesson-2">elements</a>, which describe and label what a piece of text should be. 
-                    For example, the <code class="language-html">&lt;p&gt;</code> element is used to label plaintext and paragraphs.
-                </p>
-                <pre><code class="language-html">&lt;p&gt;Hello World&lt;/p&gt;</code></pre>
-                <p>
-                    The structure of webpages arise from the order of elements and the ability to nest different elements together.
-                </p>
-                <pre><code class="language-html">&lt;h1&gt;My &lt;i&gt;Three&lt;/i&gt; Favourite Colours&lt;/h1&gt;
+                <section id="html">
+                    <h1>HTML</h1>
+                    <p>
+                        HTML stands for HyperText Markup Language. It is the language used to describe the overall structure of webpages as well as its contents. 
+                        In comparison, CSS is used to describe the appearance of webpages and JavaScript is used to control the functionality of webpages.
+                    </p>
+                    <p>
+                        HTML has a fairly long history, dating back to 1993. At the beginning, there was no standard way to display HTML code, meaning websites 
+                        would have to be written differently for different browsers. As time went on, web standards were developed and adopted by browsers. Newer 
+                        versions of HTML were released, adding new features.
+                    </p>
+                    <p>
+                        All browsers now are capable of running HTML code in more or less the same way. These include Chrome, Safari, Firefox, and more. The most
+                        recent version of HTML is HTML5.
+                    </p>
+                </section>
+                <section id="elements">
+                    <h2>Elements</h2>
+                    <p>
+                        At its core, HTML is made of <a href="/tutorials/html/lesson-2">elements</a>, which describe and label what things should be. Most elements 
+                        consists of an opening and closing tag. For example, the <code class="language-html">&lt;p&gt;</code> element encloses text that is meant to 
+                        be a paragraph.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+                    <p>
+                        The structure of webpages arise from the order of elements and the ability to nest different elements together.
+                    </p>
+                    <pre><code class="language-html">&lt;h1&gt;My &lt;i&gt;Three&lt;/i&gt; Favourite Colours&lt;/h1&gt;
 &lt;ul&gt;
     &lt;li&gt;Red&lt;/li&gt;
     &lt;li&gt;Blue&lt;/li&gt;
     &lt;li&gt;Yellow&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-                <p>
-                    Don't worry if this does not make sense yet. We will learn more about how elements work in the future.
-                </p>
-                <h2>Resources</h2>
-                <ul>
-                    <li><a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a></li>
-                    <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
-                    <li><a href="https://www.youtube.com/watch?v=pQN-pnXPaVg">HTML Full Course</a></li>
-                </ul>
+                    <div class="code-block-output">
+                        <h1>My <i>Three</i> Favourite Colours</h1>
+                        <ul>
+                            <li>Red</li>
+                            <li>Blue</li>
+                            <li>Yellow</li>
+                        </ul>
+                    </div>
+                    <p>
+                        Don't worry if this does not make sense yet. We will learn more about the different elements and how they work soon.
+                    </p>
+                </section>
+                <section id="resources">
+                    <h2>Resources</h2>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=pQN-pnXPaVg">HTML Full Course (Video)</a></li>
+                    </ul>
+                </section>
             </div>
         </div>
 

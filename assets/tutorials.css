@@ -17,14 +17,29 @@ body {
     max-width: 780px;
 }
 
+.code-block-output {
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 2px 5px;
+    scale: 0.92;
+}
+
 /* Small width layout */
 
 @media only screen and (max-width: 800px) {
+    .code-block-output, code {
+        transition: ease all 0.5s;
+    }
+
     #content {
         width: 100%;
         padding-left: 2%;
         padding-right: 2%;
         min-width: 0px;
+    }
+    
+    .code-block-output {
+        margin: 0;
     }
 }
 
@@ -39,7 +54,7 @@ body {
     #page-wrapper {
         position: static;
         left: 0;
-        width: 100%;
+        width: 100vw;
         padding: 0 !important;
     }
 
