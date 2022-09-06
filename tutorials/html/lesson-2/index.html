@@ -9,9 +9,97 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>Elements</h1>
-            </div>
+            <main id="content">
+                <section id="elements">
+                    <h1>Elements</h1>
+                    <p>HTML is made up of elements, which create the structure and layout of webpages.</p>
+                </section>
+                <section id="html_syntax">
+                    <h2>HTML Syntax</h2>
+                    <p>
+                        HTML has one main syntax structure for most of its elements. It consists of an opening and closing tag which surrounds the element's 
+                        contents. This is what it looks like:
+                    </p>
+                    <pre><code class="language-html">&lt;tag&gt;content&lt;/tag&gt;</code></pre>
+                    <img src="/assets/html-syntax-example.png">
+                    <h3>Tags</h3>
+                    <p>
+                        The opening tag shows where the element starts. It contains the element's name, and possible some <a href="/tutorials/html/lesson-4/">attributes</a>.
+                        The opening tag is followed by the element's content, which is some form of text. The closing tag also contains the element's name but 
+                        starts with a <i>forward</i> slash.
+                    </p>
+                    <p>
+                        Tags in HTML are not case-sensitive. <code>&lt;title&gt;</code>, <code>&lt;TITLE&gt;</code>, <code>&lt;Title&gt;</code>, and <code>&lt;TitLE&gt;</code> 
+                        are treated identically, but it is conventional to write tags in all lowercase for readability and convenience.
+                    </p>
+                    <h3>Whitespace</h3>
+                    <p>
+                        The indentation of an HTML file does not actually matter for how things will be displayed on the webpage. Although, indented code tends to be 
+                        more readable.
+                    </p>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;My Website&lt;title&gt;
+&lt;meta name=&quot;author&quot; content=&quot;James Smith&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;My &lt;i&gt;Three&lt;/i&gt; Favourite Colours&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Red&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;li&gt;Yellow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <p>
+                        Excess whitespace and line breaks in HTML are usually ignored. Consecutive spaces will be displayed as a single space.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;Hello         there, 
+        CS Club!&lt;/p&gt;</code></pre>
+                    <div class="code-block-output"><p>Hello         there, 
+                        CS Club!</p></div>
+                    <p>
+                        There are ways to properly display whitespace by using the <a href="/tutorials/html/lesson-3/#pre_element"><code>&lt;pre&gt;</code> element</a>,
+                        the <a href="/tutorials/html/lesson-4/#line_break_element"><code>&lt;br&gt;</code> element</a>, or HTML escape codes.
+                    </p>
+                </section>
+                <section id="heading_elements">
+                    <h2>Heading Elements</h2>
+                    <p>There are six elements that are used for headers in HTML. These are the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> elements.</p>
+                    <pre><code class="language-html">&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+                    <div class="code-block-output">
+                        <h1>Heading 1</h1>
+                        <h2>Heading 2</h2>
+                        <h3>Heading 3</h3>
+                        <h4>Heading 4</h4>
+                        <h5>Heading 5</h5>
+                        <h6>Heading 6</h6>
+                    </div>
+                    <p>
+                        There should only be one <code>&lt;h1&gt;</code> element per page, representing the page title. Heading elements should be used for headers,
+                        not making text big or bold. There are better ways to do that using <a href="/tutorials/html/lesson-3/#bold">text formatting</a> and CSS.
+                    </p>
+                </section>
+                <hr>
+                <section id="how_to_use_inspect_element">
+                    <h2>How to Use Inspect Element</h2>
+                    <p>
+                        Inspect element is a very useful tool. It lets you look at the HTML source code of every website. But, it can do more than that. It can
+                        help you determine the exact dimensions of elements, where they fit on the page, and more. As a web developer, inspect element can help
+                        you solve problems with your website faster.
+                    </p>
+                    <p>
+                        In order to use inspect element, all you have to do is right click anywhere on the page and click <i>Inspect</i>. For more information,
+                        check out this article: <a href="https://zapier.com/blog/inspect-element-tutorial/">Inspect Element: How to Temporarily Edit Any Webpage</a>.
+                    </p>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->

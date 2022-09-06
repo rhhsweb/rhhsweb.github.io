@@ -1,6 +1,5 @@
 /* Make sure navbar doesn't overlap page content */
 body {
-    scroll-padding-top: 70px;
     height: 100vh;
 }
 
@@ -147,6 +146,7 @@ body {
 
     #side-bar {
         padding-top: 20px;
+        padding-bottom: 10px;
         position: static;
         display: block;
         width: 100vw;
