@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
 }
 
-img {
+#content img {
     width: 100%;
     margin-bottom: 16px;
 }
@@ -22,13 +22,26 @@ img {
     max-width: 780px;
 }
 
+.incorrect-code {
+    background-color: rgb(245, 220, 220);
+}
+
+.correct-code {
+    background-color: rgb(220, 245, 220);
+}
+
 .code-block-output {
+    all: revert;
     border: 1px solid black;
     border-radius: 6px;
     padding: 2px 5px;
     scale: 0.92;
+    margin-bottom: 10px;
 }
 
+.code-block-output * {
+    all: revert;
+}
 /* Small width layout */
 
 @media only screen and (max-width: 800px) {
