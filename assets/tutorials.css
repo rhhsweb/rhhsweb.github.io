@@ -2,7 +2,7 @@ body {
     overflow-x: hidden;
 }
 
-#content img {
+#content .syntax-example {
     width: 100%;
     margin-bottom: 16px;
 }
