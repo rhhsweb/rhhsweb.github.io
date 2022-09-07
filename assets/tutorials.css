@@ -13,6 +13,8 @@ body {
     min-height: calc(100vh - 70px);
     left: 265px;
     top: 70px;
+    border-bottom: 70px solid #eee;
+    padding-bottom: 35px;
 }
 
 #content {
