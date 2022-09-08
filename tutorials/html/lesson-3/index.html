@@ -9,14 +9,129 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
+            <main id="content">
                 <h1>Text Formatting</h1>
-            </div>
+                <section id="nesting_elements">
+                    <h2>Nesting Elements</h2>
+                    <p>
+                        Elements can be put (nested) inside the content of other elements. The most common example of this is the <code>&lt;body&gt;</code> 
+                        and <code>&lt;head&gt;</code> elements nested within the <code>&lt;html&gt;</code> element.
+                    </p>
+                    <pre><code class="language-html">&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <p>
+                        Nesting helps group elements and apply multiple effects to the same bit of text. This is how we can format text.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The &lt;b&gt;quick&lt;/b&gt; brown fox jumps over the &lt;b&gt;lazy&lt;/b&gt; dog.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p>The <b>quick</b> brown fox jumps over the <b>lazy</b> dog.</p>
+                    </div>
+                    <h3>How Not To Nest Elements</h3>
+                    <p>
+                        Nested elements must be completely inside their parent element. This means the opening and closing tags of nested elements must both
+                        be within the the opening and closing tags of the parent element. Otherwise, it will not work properly. Here is an example where nesting 
+                        is done incorrectly:
+                    </p>
+                    <pre><code class="language-html incorrect-code">&lt;p&gt;Hello &lt;i&gt;World!&lt;/p&gt;&lt;/i&gt;</code></pre>
+                    <p>
+                        To fix this, the <code>&lt;/i&gt;</code> closing tag must be put within the <code>&lt;p&gt;</code> element.
+                    </p>
+                    <pre><code class="language-html correct-code">&lt;p&gt;Hello &lt;i&gt;World!&lt;/i&gt;&lt;/p&gt;</code></pre>
+                </section>
+                <section id="bold">
+                    <h2>Bold</h2>
+                    <p>
+                        There are two elements for bolding text: <code>&lt;b&gt;</code> and <code>&lt;strong&gt;</code>. They appear identical, but <code>&lt;strong&gt;</code>
+                        has an emphasis on screen readers while <code>&lt;b&gt;</code> does not.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The &lt;b&gt;quick&lt;/b&gt; brown fox jumped over the &lt;b&gt;lazy&lt;/b&gt; dog.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;quick&lt;/strong&gt; brown fox jumped over the &lt;strong&gt;lazy&lt;/strong&gt; dog.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p>The <b>quick</b> brown fox jumped over the <b>lazy</b> dog.</p>
+                        <p>The <strong>quick</strong> brown fox jumped over the <strong>lazy</strong> dog.</p>
+                    </div>
+                </section>
+                <section id="italics">
+                    <h2>Italics</h2>
+                    <p>
+                        There are two elements for italicizing text: <code>&lt;i&gt;</code> and <code>&lt;em&gt;</code>. They appear identical but <code>&lt;em&gt;</code>
+                        has an emphasis on screen readers while <code>&lt;i&gt;</code> does not.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The &lt;i&gt;quick&lt;/i&gt; brown fox jumped over the &lt;i&gt;lazy&lt;/i&gt; dog.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;quick&lt;/em&gt; brown fox jumped over the &lt;em&gt;lazy&lt;/em&gt; dog.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p>The <i>quick</i> brown fox jumped over the <i>lazy</i> dog.</p>
+                        <p>The <em>quick</em> brown fox jumped over the <em>lazy</em> dog.</p>
+                    </div>
+                </section>
+                <section id="underline">
+                    <h2>Underline</h2>
+                    <p>
+                        The <code>&lt;u&gt;</code> element is used for underlining text.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The &lt;u&gt;quick&lt;/u&gt; brown fox jumped over the &lt;u&gt;lazy&lt;/u&gt; dog.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p>The <u>quick</u> brown fox jumped over the <u>lazy</u> dog.</p>
+                    </div>
+                </section>
+                <section id="subscript_and_superscript">
+                    <h2>Subscript and Superscript</h2>
+                    <p>
+                        The <code>&lt;sub&gt;</code> element is used for subscript and the <code>&lt;sup&gt;</code> element is used for superscript.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;This is &lt;sub&gt;subscript&lt;/sub&gt; and this is &lt;sup&gt;superscript&lt;/sup&gt;.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p>This is <sub>subscript</sub> and this is <sup>superscript</sup>.</p>
+                    </div>
+                </section>
+                <section id="code">
+                    <h2>Code</h2>
+                    <p>
+                        The <code>&lt;code&gt;</code> element is used for displaying code. This will usually apply a monospace font to the text.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The &lt;code&gt;quick&lt;/code&gt; brown fox jumped over the &lt;code&gt;lazy&lt;/code&gt; dog.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p>The <code>quick</code> brown fox jumped over the <code>lazy</code> dog.</p>
+                    </div>
+                </section>
+                <section id="pre_element">
+                    <h2>Pre Element</h2>
+                    <p>
+                        The <code>&lt;pre&gt;</code> element is used to properly display whitespace. <code>&lt;pre&gt;</code> is short for preformatted.
+                    </p>
+                    <pre><code class="language-html">&lt;pre&gt;This will 
+                        keep all the line   breaks     and
+    spacing.&lt;/pre&gt;</code></pre>
+                    <div class="code-block-output">
+                        <pre>This will 
+                            keep all the line   breaks     and
+    spacing.</pre>
+                    </div>
+                    <h3>Pre and Code</h3>
+                    <p>
+                        Often, code blocks will contain large amounts of whitespace. So, the <code>&lt;code&gt;</code> element can be nested inside a <code>&lt;pre&gt;</code> 
+                        element for code blocks.
+                    </p>
+                    <pre><code class="language-html">&lt;pre&gt;&lt;code&gt;def add(a, b):
+    result = a + b
+    return result&lt;/code&gt;&lt;/pre&gt;</code></pre>
+                    <div class="code-block-output">
+                        <pre><code class="nohighlight">def add(a, b):
+    result = a + b
+    return result</code></pre>
+                    </div>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
-        <script src="/assets/template.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-        <script>useAll(); </script>
+        <div id="scripts">
+            <script src="/assets/template.js"></script>
+            <script>useAll();</script>
+        </div>
     </body>
 </html>

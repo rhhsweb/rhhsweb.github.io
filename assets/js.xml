@@ -1,48 +1,58 @@
 <?xml version="1.0" ?>
 <root>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
-        <link rel="stylesheet" href="/assets/navigation.css" />
-        <link rel="stylesheet" href="/assets/tutorials.css" />
-    </head>
-    <div id="top-bar">
-        <a href="/tutorials/js"><button class="button left js-tutorial">Previous</button></a>
-        <a href="/tutorials/js"><button class="button right js-tutorial">Next</button></a>
-    </div>
-    <aside id="side-bar">
-        <div id="side-bar-header">
-            <a href="/">
-                <img src="/assets/site-logo-inverted.png" />
-                <h4>RHHS Web Development</h4>
-            </a>
+            <!-- stylesheets -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/arduino-light.min.css" integrity="sha512-M4nH9C7TRCVWLGruh9fHTfYxGWDiKpOGNjpfC9irhF06aLiYmJczZlW+/6IKOZ+75AGk4Wn4clgd6J13T0zzXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous" />
+            <link rel="stylesheet" href="/assets/navigation.css" />
+            <link rel="stylesheet" href="/assets/tutorials.css" />
+        </head>
+        <div id="top-bar">
+            <a href="/tutorials/js"><button class="button left js-tutorial">Previous</button></a>
+            <a href="/tutorials/js"><button class="button right js-tutorial">Next</button></a>
         </div>
-        <a class="fa-solid fa-bars" id="navbar-collapse" href="#side-navbar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="side-navbar"> </a>
-        <nav id="side-navbar" class="collapse show">
-            <a class="nav-link js-tutorial" href="/tutorials/js">JavaScript</a>
-            <div>
-                <header>JS</header>
-                <ul>
-                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-1">Adding JavaScript</a></li>
-                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-2">Alerts</a></li>
-                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-3">DOM Manipulation</a></li>
-                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-4">Events</a></li>
-                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-5">Window</a></li>
-                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-6">Timers</a></li>
-                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-7">Storages</a></li>
-                </ul>
+        <aside id="side-bar">
+            <div id="side-bar-header">
+                <a href="/"><img src="/assets/site-logo-inverted.png" /></a>
+                <a href="/"><h4>RHHS Web Development</h4></a>
+                <a class="fa-solid fa-bars" id="navbar-collapse" href="#side-navbar" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="side-navbar"> </a>
             </div>
-            <div>
-                <header>AJAX</header>
-                <ul>
-                    <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-8">AJAX</a></li>
-                </ul>
-            </div>
-        </nav>
-    </aside>
+            <nav id="side-navbar" class="collapse show">
+                <a class="nav-link js-tutorial" href="/tutorials/js">JavaScript</a>
+                <div>
+                    <header>JS</header>
+                    <ul>
+                        <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-1">Adding JavaScript</a></li>
+                        <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-2">Alerts</a></li>
+                        <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-3">DOM Manipulation</a></li>
+                        <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-4">Events</a></li>
+                        <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-5">Window</a></li>
+                        <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-6">Timers</a></li>
+                        <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-7">Cookies and Local Storage</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <header>AJAX</header>
+                    <ul>
+                        <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-8">AJAX</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+        <div id="scripts">
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"> </script>
+            <script id="hljs-script" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"> </script>
+            <script> 
+                document.getElementById("hljs-script").onload = (event) => { 
+                    hljs.highlightAll();
+                }
+            </script>
+        </div>
+    </html>
 </root>

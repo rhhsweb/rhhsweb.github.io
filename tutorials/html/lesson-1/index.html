@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Doctype | HTML | RHHS Web Development</title>
+        <title>Document Structure | HTML | RHHS Web Development</title>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -9,14 +9,111 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>Doctype</h1>
-            </div>
+            <main id="content">
+                <section id="document_structure">
+                    <h1>Document Structure</h1>
+                    <p>
+                        All HTML documents start with the same basic layout. This consists of a doctype and <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, 
+                        and <code>&lt;body&gt;</code> elements.
+                        Let's take a look it:
+                    </p>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;!-- Comment: This is where website metadata goes --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- Comment: This is where visible website content goes --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </section>
+                <section id="doctype">
+                    <h2>Doctype</h2>
+                    <p>
+                        The doctype is a bit of information that goes at the beginning of all HTML documents. It tells the browser about the type and version of
+                        the file it is expected to run. It is not actually an HTML element. 
+                    </p>
+                    <p>
+                        <code>&lt;!DOCTYPE html&gt;</code> tells the browser to run an HTML 5 document, which is what we want.
+                    </p>
+                    <p>
+                        It is also possible to run older versions of HTML using a different doctype. For example, if we wanted to run an HTML file using HTML 4.01, 
+                        it would look like this:
+                    </p>
+                    <pre><code class="language-html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></pre>
+                    <p>
+                        There is little reason to use an older version of HTML now. These doctype declarations allow older HTML files and websites to continue working.
+                    </p>
+                </section>
+                <section id="html_element">
+                    <h2>HTML Element</h2>
+                    <p>
+                        The <code>&lt;html&gt;</code> element wraps all the content of the website. It is also known as the root element.
+                    </p>
+                    <p>
+                </section>
+                <section id="head_element">
+                    </p>
+                    <h2>Head Element</h2>
+                    <p>
+                        The <code>&lt;head&gt;</code> element contains important data about the website that are not part of the visible structure of the page.
+                    </p>
+                    <p>
+                        For example, the <code>&lt;title&gt;</code> element contains the title of the website displayed on the tab.
+                    </p>
+                    <pre><code class="language-html"><code>&lt;head&gt;</code>
+    &lt;title&gt;My Website&lt;title&gt;
+&lt;/head&gt;</code></pre>
+                    <p>
+                        Or, the <code>&lt;meta&gt;</code> element which can contain a variety of information, including the page author (you!).
+                    </p>
+                    <pre><code class="language-html"><code>&lt;head&gt;</code>
+    &lt;meta name=&quot;author&quot; content=&quot;James Smith&quot;&gt;
+&lt;/head&gt;</code></pre>
+                </section>
+                <section id="body_element">
+                    <h2>Body Element</h2>
+                    <p>
+                        The <code>&lt;body&gt;</code> element contains all of the elements relating to the structure of the page. There can only be one body 
+                        per page. 
+                    </p>
+                    <pre><code class="language-html">&lt;body&gt;
+    &lt;h1&gt;My &lt;i&gt;Three&lt;/i&gt; Favourite Colours&lt;/h1&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Red&lt;/li&gt;
+        &lt;li&gt;Blue&lt;/li&gt;
+        &lt;li&gt;Yellow&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;</code></pre>
+                    <p>
+                        Most of the code you will be writing right now will go inside the <code>&lt;body&gt;</code>.
+                    </p>
+                </section>
+                <section id="complete_example">
+                    <h2>Complete Example</h2>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My Website&lt;title&gt;
+        &lt;meta name=&quot;author&quot; content=&quot;James Smith&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;My &lt;i&gt;Three&lt;/i&gt; Favourite Colours&lt;/h1&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Red&lt;/li&gt;
+            &lt;li&gt;Blue&lt;/li&gt;
+            &lt;li&gt;Yellow&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
-        <script src="/assets/template.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-        <script>useAll(); </script>
+        <div id="scripts">
+            <script src="/assets/template.js"></script>
+            <script>useAll();</script>
+        </div>
     </body>
 </html>

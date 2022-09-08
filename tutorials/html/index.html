@@ -1,32 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>HTML | RHHS Web Development</title>
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <div id="top-bar"></div>
-    <aside id="side-bar"></aside>
-    <!-- Main Content -->
-    <div class="pt-4" id="page-wrapper">
-        <div id="content">
-        <h1>HTML</h1>
-        <p>HTML stands for HyperText Markup Language. It is the language used to describe the structure of webpages.</p>
-            <div class="line"></div>
+    <head>
+        <title>HTML | RHHS Web Development</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <div id="top-bar"></div>
+        <aside id="side-bar"></aside>
+        <!-- Main Content -->
+        <div class="pt-4" id="page-wrapper">
+            <main id="content">
+                <section id="html">
+                    <h1>HTML</h1>
+                    <p>
+                        HTML stands for HyperText Markup Language. It is the language used to describe the overall structure of webpages as well as its contents. 
+                        In comparison, CSS is used to describe the appearance of webpages and JavaScript is used to control the functionality of webpages.
+                    </p>
+                    <p>
+                        HTML has a fairly long history, dating back to 1993. At the beginning, there was no standard way to display HTML code, meaning websites 
+                        would have to be written differently for different browsers. As time went on, web standards were developed and adopted by browsers. Newer 
+                        versions of HTML were released, adding new features.
+                    </p>
+                    <p>
+                        All browsers now are capable of running HTML code in more or less the same way. These include Chrome, Safari, Firefox, and more. The most
+                        recent version of HTML is HTML5.
+                    </p>
+                </section>
+                <section id="elements">
+                    <h2>Elements</h2>
+                    <p>
+                        At its core, HTML is made of <a href="/tutorials/html/lesson-2">elements</a>, which describe and label what things should be. Most elements 
+                        consists of an opening and closing tag. For example, the <code class="language-html">&lt;p&gt;</code> element encloses text that is meant to 
+                        be a paragraph.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;</code></pre>
+                    <p>
+                        The structure of webpages arises from the order of elements and the ability to nest different elements together.
+                    </p>
+                    <pre><code class="language-html">&lt;h1&gt;My &lt;i&gt;Three&lt;/i&gt; Favourite Colours&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;li&gt;Red&lt;/li&gt;
+    &lt;li&gt;Blue&lt;/li&gt;
+    &lt;li&gt;Yellow&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    <div class="code-block-output">
+                        <h1>My <i>Three</i> Favourite Colours</h1>
+                        <ul>
+                            <li>Red</li>
+                            <li>Blue</li>
+                            <li>Yellow</li>
+                        </ul>
+                    </div>
+                    <p>
+                        Don't worry if this does not make sense yet. We will learn more about the different elements and how they work soon.
+                    </p>
+                </section>
+                <section id="resources">
+                    <h2>Resources</h2>
+                    <ul>
+                        <li><a href="https://www.w3schools.com/html/">W3Schools HTML Tutorial</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=pQN-pnXPaVg">HTML Full Course (Video)</a></li>
+                    </ul>
+                </section>
+            </main>
         </div>
-    </div>
 
-    <!-- Scripts -->
-    <script src="/assets/template.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-    <script>useAll(); </script>
-</body>
+        <!-- Scripts -->
+        <div id="scripts">
+            <script src="/assets/template.js"></script>
+            <script>useAll();</script>
+        </div>
+    </body>
 </html>

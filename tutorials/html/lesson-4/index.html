@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Lists | HTML | RHHS Web Development</title>
+        <title>Attributes | HTML | RHHS Web Development</title>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -9,14 +9,206 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>Lists</h1>
-            </div>
+            <main id="content">
+                <section id="attributes">
+                    <h1>Attributes</h1>
+                    <p>
+                        Attributes provide additional information about elements. All HTML elements can have one or more attributes.
+                    </p>
+                </section>
+                <section id="attribute_syntax">
+                    <h2>Attribute Syntax</h2>
+                    <p>
+                        Attributes are listed inside the opening tag of an element. They are not case-sensitive, but it is conventional to use lowercase.
+                    </p>
+                    <pre><code class="language-html">&lt;tag attribute=&quot;value&quot;&gt;content&lt;/tag&gt;</code></pre>
+                    <img src="./html-attributes-example.png" class="syntax-example">
+                    <p>
+                        The value of attributes can be wrapped in single or double quotes. Both work as long as they are not mismatched.
+                    </p>
+                    <pre><code class="language-html">&lt;h2 class=&quot;subheading&quot;&gt;Subheading 1&lt;/h2&gt;
+&lt;h2 class=&apos;subheading&apos;&gt;Subheading 2&lt;/h2&gt;</code></pre>
+                    <pre><code class="language-html incorrect-code">&lt;h2 class=&apos;subheading&quot;&gt;Subheading 1&lt;/h2&gt;</code></pre>
+                    <p>
+                        Multiple attributes are separated by a space.
+                    </p>
+                    <pre><code class="language-html">&lt;p class=&quot;body-paragraph&quot; id=&quot;paragraph-1a&quot;&gt;The mitochondria is the powerhouse of the cell.&lt;/p&gt;</code></pre>
+                </section>
+                <section id="global_attributes">
+                    <h2>Global Attributes</h2>
+                    <p>
+                        Global attributes are HTML attributes that can go in every HTML element. While, most normal attributes can only go in a select few elements.
+                        There are many global attributes, but the two most important ones are <code>class</code> and <code>id</code>.
+                    </p>
+                    <h3>Class Attribute</h3>
+                    <p>
+                        The <code>class</code> attribute adds one or more classes to an HTML element. Classes are used to group similar elements, which is useful with CSS and 
+                        JavaScript.
+                    </p>
+                    <pre><code class="language-html">&lt;div class=&quot;city&quot;&gt;
+    &lt;h2&gt;London&lt;/h2&gt;
+    &lt;p&gt;London is the capital of England.&lt;/p&gt;
+&lt;/div&gt; 
+
+&lt;div class=&quot;city&quot;&gt;
+    &lt;h2&gt;Paris&lt;/h2&gt;
+    &lt;p&gt;Paris is the capital of France.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;city&quot;&gt;
+    &lt;h2&gt;Tokyo&lt;/h2&gt;
+    &lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <p>
+                        Multiple classes are separated by a space.
+                    </p>
+                    <pre><code class="language-html">&lt;h2 class=&quot;highlighted&quot;&gt;This is a highlighted heading&lt;/h2&gt;
+&lt;p class=&quot;body-paragraph&quot;&gt;This is a regular body paragraph.&lt;/p&gt;
+&lt;p class=&quot;body-paragraph highlighted&quot;&gt;This is a highlighted body paragraph.&lt;/p&gt;</code></pre>
+                    <h3>ID Attribute</h3>
+                    <p>
+                        The <code>id</code> attribute adds a single ID to an HTML element. IDs are unique and are used to identify one single element on a page.
+                        There cannot be multiple elements with the same ID on a page.
+                    </p>
+                    <pre><code class="language-html">&lt;h1 id=&quot;page-header&quot;&gt;Welcome to my Website!&lt;/h1&gt;</code></pre>
+                </section>
+                <section id="anchor_element">
+                    <h2>Anchor Element</h2>
+                    <p>
+                        The anchor element (<code>&lt;a&gt;</code>) is used to create links on your website. Any text within the <code>&lt;a&gt;</code> will become
+                        a link.
+                    </p>
+                    <pre><code class="language-html">&lt;a href=&quot;https://google.com&quot;&gt;Click here to go to Google!&lt;/a&gt;</code></pre>
+                    <div class="code-block-output">
+                        <a href="https://google.com">Click here to go to Google!</a>
+                    </div>
+                    <p>
+                        The <code>href</code> attribute controls where the link leads to. By default, the link opens in the current window, but this can be changed
+                        by setting the <code>target</code> attribute to <code>&quot;_blank&quot;</code>.
+                    </p>
+                    <pre><code class="language-html">&lt;a href=&quot;https://google.com&quot; target=&quot;_blank&quot;&gt;Click here to go to Google!&lt;/a&gt;</code></pre>
+                    <div class="code-block-output">
+                        <a href="https://google.com" target="_blank">Click here to go to Google!</a>
+                    </div>
+                    <p>
+                        There are four values for the <code>target</code> attribute. But, you only really need to know <code>_self</code> and <code>_blank</code>.
+                        Yon can check them out on <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target" target="_blank">MDN web docs</a>.
+                    </p>
+                    <pre><code class="language-html">&lt;a href=&quot;https://google.com&quot; target=&quot;_self&quot;&gt;Self&lt;/a&gt;
+&lt;a href=&quot;https://google.com&quot; target=&quot;_blank&quot;&gt;Blank&lt;/a&gt;
+&lt;a href=&quot;https://google.com&quot; target=&quot;_parent&quot;&gt;Parent&lt;/a&gt;
+&lt;a href=&quot;https://google.com&quot; target=&quot;_top&quot;&gt;Top&lt;/a&gt;</code></pre>
+                    <div class="code-block-output">
+                        <a href="https://google.com" target="_self">_self</a>
+                        <a href="https://google.com" target="_blank">_blank</a>
+                        <a href="https://google.com" target="_parent">_parent</a>
+                        <a href="https://google.com" target="_top">_top</a>
+                    </div>
+                </section>
+                <section id="empty_elements_self-closing_tags">
+                    <h2>Empty Elements (Self-closing Tags)</h2>
+                    <p>
+                        There is one other type of <a href="/tutorials/html/lesson-2">element</a> in HTML: empty elements. Empty elements are a type of element
+                        that do not have contents. Their syntax consists of a single self-closing tag.
+                    </p>
+                    <pre><code class="language-html">&lt;tag&gt;</code></pre>
+                    <p>
+                        That's it. Just one self-closing tag. An empty element can still have attributes inside of this tag. Sometimes an optional forward slash 
+                        will be put at the end of the tag as well.
+                    </p>
+                    <pre><code class="language-html">&lt;tag/&gt;</code></pre>
+                </section>
+                <section id="line_break_element">
+                    <h2>Line Break Element</h2>
+                    <p>
+                        The line break element (<code>&lt;br/&gt;</code>) is one way to insert empty lines in a webpage. It is an empty element, since it doesn't
+                        make sense for a line break to have content.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;Hello&lt;br/&gt;Hello Again!&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p>Hello<br/>Hello Again!</p>
+                    </div>
+                </section>
+                <section id="image_element">
+                    <h2>Image Element</h2>
+                    <p>
+                        The image element (<code>&lt;img/&gt;</code>) is used for inserting images into a webpage. It is also an empty element, since it wouldn't make
+                        sense for an image to have text on top of it.
+                    </p>
+                    <p>
+                        The image address is specified using the <code>&lt;src&gt;</code> attribute. The image can be either an online address or a file on your computer.
+                    </p>
+                    <pre><code class="language-html">&lt;img src=&quot;banana.jpg&quot; /&gt;</code></pre>
+                    <img src="./banana.jpg" />
+                    <p>
+                        You can also specify the size of the image using the <code>width</code> and <code>height</code> attributes
+                    </p>
+                    <pre><code class="language-html">&lt;img src=&quot;banana.jpg&quot; width=&quot;400&quot;/&gt;&lt;br/&gt;
+&lt;img src=&quot;banana.jpg&quot; height=&quot;20&quot;/&gt;&lt;br/&gt;
+&lt;img src=&quot;banana.jpg&quot; width=&quot;400&quot; height=&quot;20&quot;/&gt;&lt;br/&gt;</code></pre>
+                    <img src="banana.jpg" width="400"/><br/>
+                    <img src="banana.jpg" height="20"/><br/>
+                    <img src="banana.jpg" width="400" height="20"/><br/>
+                    <p>
+                        Another useful attribute you can use is the <code>alt</code> attribute. The <code>alt</code> attribute provides a description in case 
+                        the image cannot be seen (wrong address, corrupt file, screen reader).
+                    </p>
+                    <pre><code class="language-html">&lt;img src=&quot;banan.jpg&quot; alt=&quot;a banana&quot;/&gt;</code></pre>
+                    <div class="code-block-output">
+                        <img src="banan.jpg" alt="a banana"/>
+                    </div>
+                </section>
+                <section id="boolean_attributes">
+                    <h2>Boolean Attributes</h2>
+                    <p>
+                        There is one other type of HTML attribute: the boolean attribute. The boolean attribute does not have a value. It is either present or 
+                        it is not.
+                    </p>
+                    <pre><code class="language-html">&lt;tag attribute&gt;&lt;/tag&gt;
+&lt;tag attribute/&gt;</code></pre>
+                </section>
+                <section id="video_element">
+                    <h2>Video Element</h2>
+                    <p>
+                        The video element is used to insert... videos onto a webpage. Video elements have many boolean attributes. They also support multiple 
+                        sources, in case one source fails to load.
+                    </p>
+                    <pre><code class="language-html">&lt;video controls loop muted width=&quot;250&quot;&gt;
+    &lt;source src=&quot;flower.webm&quot; type=&quot;video/webm&quot;&gt;
+    &lt;source src=&quot;flower.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    Sorry, your browser doesn't support embedded videos.
+&lt;/video&gt;</code></pre>
+                    <video controls loop muted width="250">
+                        <source src="flower.webm" type="video/webm">
+                        <source src="flower" type="video/mp4">
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+                    <p>
+                        Sources are empty elements within the video element that specify a source and a file type. If all sources fail to load, the text inside 
+                        the video element will be displayed instead.
+                    </p>
+                </section>
+                <section>
+                    <h2>Audio Element</h2>
+                    <p>
+                        Audio elements work similarly to video elements. They have many of the same attributes and can have multiple sources.
+                    </p>
+                    <pre><code class="language-html">&lt;audio controls&gt;
+    &lt;source src=&quot;t-rex-roar.mp3&quot; type=&quot;audio/mp3&quot;/&gt;
+    Your browser does not support the &lt;code&gt;audio&lt;/code&gt; element.
+&lt;/audio&gt;</code></pre>
+                    <audio controls>
+                        <source src="t-rex-roar.mp3" type="audio/mp3"/>
+                        Sorry, your browser doesn't support embed audio.
+                    </audio>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
-        <script src="/assets/template.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-        <script>useAll(); </script>
+        <div id="scripts">
+            <script src="/assets/template.js"></script>
+            <script>useAll();</script>
+        </div>
     </body>
 </html>

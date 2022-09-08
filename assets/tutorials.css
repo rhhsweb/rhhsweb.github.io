@@ -1,38 +1,99 @@
+body {
+    overflow-x: hidden;
+}
+
+#content .syntax-example {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
 #page-wrapper {
     position: absolute;
     width: calc(100vw - 265px);
     min-height: calc(100vh - 70px);
     left: 265px;
     top: 70px;
+    border-bottom: 70px solid #eee;
+    padding-bottom: 35px;
 }
 
 #content {
     margin: auto;
     width: 70%;
     min-width: 520px;
+    max-width: 780px;
 }
 
-* {
-    /* border: 1px solid black;pre */
+code {
+    color: #00979d;
 }
+
+.language-html, .language-css, .language-js {
+    background-color: rgb(243, 243, 243) !important;
+}
+
+.incorrect-code {
+    background-color: rgb(245, 220, 220);
+}
+
+.correct-code {
+    background-color: rgb(220, 245, 220);
+}
+
+.code-block-output {
+    all: revert;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 2px 5px;
+    scale: 0.92;
+    margin-bottom: 10px;
+}
+
+table {
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 4px 10px;
+}
+
+/* Small width layout */
 
 @media only screen and (max-width: 800px) {
+    .code-block-output, code {
+        transition: ease all 0.5s;
+    }
+
     #content {
         width: 100%;
         padding-left: 2%;
         padding-right: 2%;
         min-width: 0px;
     }
+    
+    .code-block-output {
+        margin: 0;
+    }
 }
+
+#content a:hover {
+    text-decoration: none;
+}
+
 
 /* Mobile layout */
 
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 600px) {
     #page-wrapper {
         position: static;
         left: 0;
-        width: 100%;
+        width: 100vw;
         padding: 0 !important;
+    }
+
+    #content {
+        padding-top: 28px;
     }
 }
 

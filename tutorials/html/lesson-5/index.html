@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Attributes | HTML | RHHS Web Development</title>
+        <title>Lists | HTML | RHHS Web Development</title>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -9,14 +9,251 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>Attributes</h1>
-            </div>
+            <main id="content">
+                <section id="lists">
+                    <h1>Lists</h1>
+                    <p>
+                        HTML lists provide a way to display groups of items.
+                    </p>
+                </section>
+                <section id="list_types">
+                    <h2>List Types</h2>
+                    <p>
+                        There are three list types in HTML: ordered lists (<code>&lt;ol&gt;</code>), unordered lists (<code>&lt;ul&gt;</code>), and definition
+                        lists (<code>&lt;dl&gt;</code>).
+                    </p>
+                </section>
+                <section id="ordered_lists">
+                    <h2>Ordered Lists</h2>
+                    <p>
+                        Ordered lists are lists used when the order of items is significant. List items are nested inside the <code>&lt;ol&gt;</code> element 
+                        using the <code>&lt;li&gt;</code> element.
+                    </p>
+                    <pre><code class="language-html">&lt;ol&gt;
+    &lt;li&gt;Whisk dry ingredients together.&lt;/li&gt;
+    &lt;li&gt;Mix wet ingredients with a stand mixer.&lt;/li&gt;
+    &lt;li&gt;Preheat oven to 300 fahrenheit.&lt;/li&gt;
+    &lt;li&gt;Add dry ingredients into stand mixer with wet ingredients.&lt;/li&gt;
+    &lt;li&gt;Pour mixture into mold.&lt;/li&gt;
+    &lt;li&gt;Bake in oven for 25 minutes.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <div class="code-block-output">
+                        <ol>
+                            <li>Whisk dry ingredients together.</li>
+                            <li>Mix wet ingredients with a stand mixer.</li>
+                            <li>Preheat oven to 300 fahrenheit.</li>
+                            <li>Add dry ingredients into stand mixer with wet ingredients.</li>
+                            <li>Pour mixture into mold.</li>
+                            <li>Bake in oven for 25 minutes.</li>
+                        </ol>
+                    </div>
+                    <p>
+                        There are a few attributes that control how the elements are labeled. The <code>reversed</code> boolean attribute labels the items in 
+                        reverse order.
+                    </p>
+                    <pre><code class="language-html">&lt;ol reversed&gt;
+    &lt;li&gt;Whisk dry ingredients together.&lt;/li&gt;
+    &lt;li&gt;Mix wet ingredients with a stand mixer.&lt;/li&gt;
+    &lt;li&gt;Preheat oven to 300 fahrenheit.&lt;/li&gt;
+    &lt;li&gt;Add dry ingredients into stand mixer with wet ingredients.&lt;/li&gt;
+    &lt;li&gt;Pour mixture into mold.&lt;/li&gt;
+    &lt;li&gt;Bake in oven for 25 minutes.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <div class="code-block-output">
+                        <ol reversed>
+                            <li>Whisk dry ingredients together.</li>
+                            <li>Mix wet ingredients with a stand mixer.</li>
+                            <li>Preheat oven to 300 fahrenheit.</li>
+                            <li>Add dry ingredients into stand mixer with wet ingredients.</li>
+                            <li>Pour mixture into mold.</li>
+                            <li>Bake in oven for 25 minutes.</li>
+                        </ol>
+                    </div>
+                    <p>
+                        The type of label for the items can be set using the <code>type</code> attribute of the <code>&lt;ol&gt;</code> element. 
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Value</th>
+                            <th>Type</th>
+                        </tr>
+                        <tr>
+                            <td><code>a</code></td>
+                            <td>lowercase letters</td>
+                        </tr>
+                        <tr>
+                            <td><code>A</code></td>
+                            <td>uppercase letters</td>
+                        </tr>
+                        <tr>
+                            <td><code>i</code></td>
+                            <td>lowercase roman numerals</td>
+                        </tr>
+                        <tr>
+                            <td><code>I</code></td>
+                            <td>uppercase roman numerals</td>
+                        </tr>
+                        <tr>
+                            <td><code>1</code></td>
+                            <td>numbers (default)</td>
+                        </tr>
+                    </table>
+                    <pre><code class="language-html">&lt;ol type=&quot;a&quot;&gt;
+    &lt;li&gt;Whisk dry ingredients together.&lt;/li&gt;
+    &lt;li&gt;Mix wet ingredients with a stand mixer.&lt;/li&gt;
+    &lt;li&gt;Preheat oven to 300 fahrenheit.&lt;/li&gt;
+    &lt;li&gt;Add dry ingredients into stand mixer with wet ingredients.&lt;/li&gt;
+    &lt;li&gt;Pour mixture into mold.&lt;/li&gt;
+    &lt;li&gt;Bake in oven for 25 minutes.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <div class="code-block-output">
+                        <ol type="a">
+                            <li>Whisk dry ingredients together.</li>
+                            <li>Mix wet ingredients with a stand mixer.</li>
+                            <li>Preheat oven to 300 fahrenheit.</li>
+                            <li>Add dry ingredients into stand mixer with wet ingredients.</li>
+                            <li>Pour mixture into mold.</li>
+                            <li>Bake in oven for 25 minutes.</li>
+                        </ol>
+                    </div>
+                    <p>
+                        The <code>type</code> attribute can also be added to individual <code>&lt;li&gt;</code>
+                    </p>
+                    <pre><code class="language-html">&lt;ol type=&quot;a&quot;&gt;
+    &lt;li type=&quot;A&quot;&gt;Whisk dry ingredients together.&lt;/li&gt;
+    &lt;li&gt;Mix wet ingredients with a stand mixer.&lt;/li&gt;
+    &lt;li type=&quot;A&quot;&gt;Preheat oven to 300 fahrenheit.&lt;/li&gt;
+    &lt;li&gt;Add dry ingredients into stand mixer with wet ingredients.&lt;/li&gt;
+    &lt;li type=&quot;A&quot;&gt;Pour mixture into mold.&lt;/li&gt;
+    &lt;li&gt;Bake in oven for 25 minutes.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <div class="code-block-output">
+                        <ol type="a">
+                            <li type="A">Whisk dry ingredients together.</li>
+                            <li>Mix wet ingredients with a stand mixer.</li>
+                            <li type="A">Preheat oven to 300 fahrenheit.</li>
+                            <li>Add dry ingredients into stand mixer with wet ingredients.</li>
+                            <li type="A">Pour mixture into mold.</li>
+                            <li>Bake in oven for 25 minutes.</li>
+                        </ol>
+                    </div>
+                    <p>
+                        Finally, the starting label can be changed with the <code>start</code> attribute on the <code>&lt;ol&gt;</code> element.
+                    </p>
+                    <pre><code class="language-html">&lt;ol type=&quot;a&quot; start=&quot;4&quot;&gt;
+    &lt;li&gt;Add dry ingredients into stand mixer with wet ingredients.&lt;/li&gt;
+    &lt;li&gt;Pour mixture into mold.&lt;/li&gt;
+    &lt;li&gt;Bake in oven for 25 minutes.&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+                    <div class="code-block-output">
+                        <ol type="a" start="4">
+                            <li>Add dry ingredients into stand mixer with wet ingredients.</li>
+                            <li>Pour mixture into mold.</li>
+                            <li>Bake in oven for 25 minutes.</li>
+                        </ol>
+                    </div>
+                </section>
+                <section id="unordered_lists">
+                    <h2>Unordered Lists</h2>
+                    <p>
+                        Unordered lists are lists used when the order of items is significant. 
+                    </p>
+                    <pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;Penne&lt;/li&gt;
+    &lt;li&gt;Broccoli&lt;/li&gt;
+    &lt;li&gt;Olive oil&lt;/li&gt;
+    &lt;li&gt;Parmesan&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    <div class="code-block-output">
+                        <ul>
+                            <li>Penne</li>
+                            <li>Broccoli</li>
+                            <li>Olive oil</li>
+                            <li>Parmesan</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="definition_lists">
+                    <h2>Definition Lists</h2>
+                    <p>
+                        Definition lists are lists containing description terms (<code>&lt;dt&gt;</code>) and description details (<code>&lt;dd&gt;</code>) elements.
+                    </p>
+                    <pre><code class="language-html">&lt;dl&gt;
+    &lt;dt&gt;HTML&lt;/dt&gt;
+    &lt;dd&gt;HTML is a language used to describe the structure of webpages.&lt;/dd&gt;
+    &lt;dt&gt;CSS&lt;/dt&gt;
+    &lt;dd&gt;CSS is a language used to describe the appearance of webpages.&lt;/dd&gt;
+    &lt;dt&gt;JavaScript&lt;/dt&gt;
+    &lt;dd&gt;JavaScript is a language used for adding functionality to webpages.&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+                    <div class="code-block-output">
+                        <dl>
+                            <dt>HTML</dt>
+                            <dd>HTML is a language used to describe the structure of webpages.</dd>
+                            <dt>CSS</dt>
+                            <dd>CSS is a language used to describe the appearance of webpages.</dd>
+                            <dt>JavaScript</dt>
+                            <dd>JavaScript is a language used for adding functionality to webpages.</dd>
+                        </dl>
+                    </div>
+                </section>
+                <section id="nesting_lists">
+                    <h2>Nesting Lists</h2>
+                    <p>
+                        Lists can be nested inside lists.
+                    </p>
+                    <pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;Sauce
+        &lt;ol&gt;
+            &lt;li&gt;Combine soy sauce with mirin.&lt;/li&gt;
+            &lt;li&gt;Add salt and pepper to taste.&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Noodles
+        &lt;ol&gt;
+            &lt;li&gt;Set a large pot of water to a boil.&lt;/li&gt;
+            &lt;li&gt;Add noodles, cook for 8 minutes.&lt;/li&gt;
+            &lt;li&gt;Strain and rinse with cold water.&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Garnish
+        &lt;ul&gt;
+            &lt;li&gt;Spring onions&lt;/li&gt;
+            &lt;li&gt;Sesame seeds&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    <div class="code-block-output">
+                        <ul>
+                            <li>Sauce
+                                <ol>
+                                    <li>Combine soy sauce with mirin and soup base.</li>
+                                    <li>Add salt and sesame oil to taste.</li>
+                                </ol>
+                            </li>
+                            <li>Soba noodles
+                                <ol>
+                                    <li>Set a large pot of water to a boil.</li>
+                                    <li>Add noodles, cook for 8 minutes.</li>
+                                    <li>Strain and toss with cold water.</li>
+                                </ol>
+                            </li>
+                            <li>Garnish
+                                <ul>
+                                    <li>Spring onions</li>
+                                    <li>Sesame seeds</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
-        <script src="/assets/template.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-        <script>useAll(); </script>
+        <div id="scripts">
+            <script src="/assets/template.js"></script>
+            <script>useAll();</script>
+        </div>
     </body>
 </html>
