@@ -49,10 +49,6 @@ code {
     margin-bottom: 10px;
 }
 
-.code-block-output * {
-    all: revert;
-}
-
 table {
     margin-bottom: 20px;
 }
