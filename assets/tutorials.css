@@ -24,6 +24,14 @@ body {
     max-width: 780px;
 }
 
+code {
+    color: #00979d;
+}
+
+.language-html, .language-css, .language-js {
+    background-color: rgb(243, 243, 243) !important;
+}
+
 .incorrect-code {
     background-color: rgb(245, 220, 220);
 }
@@ -44,6 +52,16 @@ body {
 .code-block-output * {
     all: revert;
 }
+
+table {
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 4px 10px;
+}
+
 /* Small width layout */
 
 @media only screen and (max-width: 800px) {
