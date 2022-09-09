@@ -9,9 +9,296 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>Content Division</h1>
-            </div>
+            <main id="content">
+                <section id="content_division">
+                    <h1>Content Division</h1>
+                    <p>
+                        The more elements exist on a webpage, the more complicated it becomes to read and work on. Let's take a look at a modified example
+                        from <a href="https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html" target="_blank">MDN Web Docs</a>.
+                    </p>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en-US&quot;&gt;
+    &lt;head&gt;
+        &lt;title&gt;My page title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Header&lt;/h1&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Our team&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;form&gt;
+            &lt;input type=&quot;search&quot; name=&quot;q&quot; placeholder=&quot;Search query&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Go!&quot;&gt;
+        &lt;/form&gt;
+        &lt;h2&gt;Article heading&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set
+        sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. 
+        Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam 
+        tincidunt congue enim, ut porta lorem lacinia consectetur.&lt;/p&gt;
+
+        &lt;h3&gt;Subsection&lt;/h3&gt;
+        &lt;p&gt;Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit 
+        amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a 
+        semper sed, adipiscing id dolor.&lt;/p&gt;
+        &lt;p&gt;Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit 
+        amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices 
+        accumsan. Donec sed odio eros.&lt;/p&gt;
+
+        &lt;h3&gt;Another subsection&lt;/h3&gt;
+        &lt;p&gt;Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque 
+        penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. 
+        Mauris vitae nisi at sem facilisis semper ac in est.&lt;/p&gt;
+        &lt;p&gt;Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis 
+        vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur 
+        sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.&lt;/p&gt;
+        
+        &lt;h2&gt;Related&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Oh I do like to be beside the seaside&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Oh I do like to be beside the sea&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Although in the North of England&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;It never stops raining&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Oh well&hellip;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;p&gt;&copy;Copyright 2050 by nobody. All rights reversed.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <p>
+                        Related content on websites can be grouped together in order to organize them. There are specific elements in HTML that produce virtually no
+                        impact on the appearance. Their main purpose is to group elements. Later on, these groupings can allow elements to be styled together.
+                    </p>
+                    <pre><code class="language-html">&lt;!-- CSS: give the <div> a border and the <div> text a shadow --&gt;
+&lt;style&gt;
+    .picture-frame {
+        border: 5px dashed goldenrod;
+        margin: auto;
+        width: fit-content;
+        text-align: center;
+        text-shadow: 5px 3px 5px gray;
+    }
+
+    .picture-frame img {
+        width: 400px;
+    }
+&lt;/style&gt;
+&lt;p&gt;Take a look at this picture of a duck: &lt;/p&gt; &lt;!-- does not have a shadow --&gt;
+&lt;div class=&quot;picture-frame&quot;&gt;
+    &lt;img src=&quot;https://www.thesprucepets.com/thmb/SWznkKAjlJA4OB4EQTNxgb2akB8=/735x0/GettyImages-481523341-acc726247c9e4f5abef6f4bd13559691.jpg&quot; alt=&quot;a small yellow duck&quot;&gt;
+    &lt;p&gt;A duck.&lt;/p&gt; &lt;!-- does have a shadow --&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="code-block-output">
+                        <!-- CSS: give the <div> a border and the <div> text a shadow -->
+                        <style>
+                            .picture-frame {
+                                border: 5px dashed goldenrod;
+                                margin: auto;
+                                width: fit-content;
+                                text-align: center;
+                                text-shadow: 5px 3px 5px gray;
+                            }
+    
+                            .picture-frame img {
+                                max-width: 200px;
+                            }
+                        </style>
+                        <p>Take a look at this picture of a duck: </p> <!-- does not have a shadow -->
+                        <div class="picture-frame">
+                            <img src="https://www.thesprucepets.com/thmb/SWznkKAjlJA4OB4EQTNxgb2akB8=/735x0/GettyImages-481523341-acc726247c9e4f5abef6f4bd13559691.jpg" alt="a small yellow duck">
+                            <p>A duck.</p> <!-- does have a shadow -->
+                        </div>
+                    </div>
+                    <img class="centered" src="https://patrickhlauke.github.io/aria/presentation/pictures/blog-structure-after-html5.png">
+                </section>
+                <section id="div_element">
+                    <h2>Div Element</h2>
+                    <p>
+                        The <code>&lt;div&gt;</code> element is the most general-purpose content division element. Unlike some of the more specific content 
+                        division elements, it does not represent anything in particular.
+                    </p>
+                    <p>
+                        Normally <code>&lt;div&gt;</code> elements cannot be seen. But, in this example, they are intentionally bordered.
+                    </p>
+                    <pre><code class="language-html">&lt;div&gt;
+    &lt;img width=&quot;300&quot; src=&quot;https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg&quot; alt=&quot;a cute puppy&quot;&gt;
+    &lt;p&gt;Look at this cute puppy!&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div&gt;
+    &lt;h2&gt;Subheading 1&lt;/h2&gt;
+    &lt;p&gt;The quick brown fox jumped over the lazy dog.&lt;/p&gt;
+&lt;/div&gt;
+&lt;br&gt;
+&lt;div&gt;
+    &lt;h2&gt;Subheading 2&lt;/h2&gt;
+    &lt;p&gt;The lazy fox jumped over the quick brown dog.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="code-block-output bordered-divs">
+                        <div>
+                            <img width="300" src="https://i.ytimg.com/vi/MPV2METPeJU/maxresdefault.jpg" alt="a cute puppy">
+                            <p>Look at this cute puppy!</p>
+                        </div>
+                        <br>
+                        <div>
+                            <h2>Subheading 1</h2>
+                            <p>The quick brown fox jumped over the lazy dog.</p>
+                        </div>
+                        <br>
+                        <div>
+                            <h2>Subheading 2</h2>
+                            <p>The lazy fox jumped over the quick brown dog.</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="span_element">
+                    <h2>Span Element</h2>
+                    <p>
+                        The <code>&lt;span&gt;</code> element is another generic content division element.
+                    </p>
+                    <p>
+                        You may have noticed that the <code>&lt;div&gt;</code> element seemed to extend to about the full width of the container it is in.
+                        Unlike the <code>&lt;div&gt;</code> element, the <code>&lt;span&gt;</code> element does not extend to the full width of the container.
+                        In this example, the text within the <code>&lt;span&gt;</code> elements are bordered.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The &lt;span&gt;quick brown&lt;/span&gt; fox jumped over the &lt;span&gt;lazy&lt;/span&gt; dog.&lt;/p&gt;
+&lt;span&gt;This is a span.&lt;/span&gt;</code></pre>
+                    <div class="code-block-output bordered-spans">
+                        <p>The <span>quick brown</span> fox jumped over the <span>lazy</span> dog.</p>
+                        <span>This is a span.</span>
+                    </div>
+                </section>
+                <section id="main_element">
+                    <h2>Main Element</h2>
+                    <p>
+                        The <code>&lt;main&gt;</code> element is used to group elements relating to the main content of a webpage. For example, this whole text column
+                        are grouped inside a <code>&lt;main&gt;</code> element. The navigation and the top bar on this webpage are not part of the <code>&lt;main&gt;</code>
+                        element.
+                    </p>
+                </section>
+                <section id="aside_element">
+                    <h2>Aside Element</h2>
+                    <p>
+                        The <code>&lt;aside&gt;</code> element is used to group elements and content that are to the side of the main content of a webpage. For example,
+                        the black side bar is grouped inside an <code>&lt;aside&gt;</code> element.
+                    </p>
+                </section>
+                <section id="nav_element">
+                    <h2>Nav Element</h2>
+                    <p>
+                        The <code>&lt;nav&gt;</code> element is used to group elements that are related to navigating the webpage. For example, the list of lessons
+                        is wrapped in one <code>&lt;nav&gt;</code> element.
+                    </p>
+                    <pre><code class="language-html">&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;/tutorials/html&quot;&gt;HTML&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/tutorials/css&quot;&gt;CSS&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;/tutorials/js&quot;&gt;JS&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+                    <div class="code-block-output">
+                        <nav>
+                            <ul>
+                                <li><a href="/tutorials/html">HTML</a></li>
+                                <li><a href="/tutorials/css">CSS</a></li>
+                                <li><a href="/tutorials/js">JS</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <section id="header_element">
+                    <h2>Header Element</h2>
+                    <p>
+                        The <code>&lt;header&gt;</code> element is typically used to group elements that can be the header of the webpage. This can take be interpreted 
+                        in different ways. For example, there can be one single header around a news article headline or a header around each news subheading.
+                    </p>
+                    <pre><code class="language-html">&lt;header&gt;
+    &lt;h1&gt;Duck Crossing Causes Large Traffic Jam&lt;/h1&gt;
+    &lt;p&gt;Article by James Smith&lt;/p&gt;
+    &lt;p&gt;Published on June 8, 2022&lt;/p&gt;
+    &lt;img width=&quot;100%&quot; src=&quot;https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F05%2F25%2Fduck-with-ducklings-2-1303386917-2000.jpg&amp;q=60&quot;&gt;
+&lt;/header&gt;
+&lt;br&gt;
+&lt;p&gt;A duck crossing of over 200 ducks brings Highway 2 to a standstill...&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <header>
+                            <h1>Duck Crossing Causes Large Traffic Jam</h1>
+                            <p>Article by James Smith</p>
+                            <p>Published on June 8, 2022</p>
+                            <img width="100%" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F05%2F25%2Fduck-with-ducklings-2-1303386917-2000.jpg&q=60">
+                        </header>
+                        <br>
+                        <p>A duck crossing of over 500 ducks brings Highway 12 to a complete standstill for commuters this morning...</p>
+                    </div>
+                </section>
+                <section id="article_element">
+                    <h2>Article Element</h2>
+                    <p>
+                        The <code>&lt;article&gt;</code> element is used to group elements that make up an article, like a blog post or news article. The entire
+                        previous example can be grouped inside an <code>&lt;article&gt;</code> element.
+                    </p>
+                    <pre><code class="language-html">&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Duck Crossing Causes Large Traffic Jam&lt;/h1&gt;
+        &lt;p&gt;Article by James Smith&lt;/p&gt;
+        &lt;p&gt;Published on June 8, 2022&lt;/p&gt;
+        &lt;img width=&quot;100%&quot; src=&quot;https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F05%2F25%2Fduck-with-ducklings-2-1303386917-2000.jpg&amp;q=60&quot;&gt;
+    &lt;/header&gt;
+    &lt;br&gt;
+    &lt;p&gt;A duck crossing of over 200 ducks brings Highway 2 to a standstill...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+                </section>
+                <section id="section_element">
+                    <h2>Section Element</h2>
+                    <p>
+                        The <code>&lt;section&gt;</code> element is used to split an article by its headers. In this example, the sections are bordered.
+                    </p>
+                    <pre><code class="language-html">&lt;section&gt;
+    &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Amet facilisis magna etiam tempor orci eu lobortis. Consectetur 
+    lorem donec massa sapien faucibus et molestie ac.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+    &lt;h2&gt;Consectetur&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Lectus urna duis convallis convallis. Magna eget est lorem ipsum 
+    dolor sit amet consectetur adipiscing.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+    &lt;h2&gt;Amet&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+    ut labore et dolore magna aliqua. Id porta nibh venenatis cras sed felis eget velit. Viverra orci 
+    sagittis eu volutpat odio.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                <div class="code-block-output bordered-sections">
+                    <section>
+                        <h2>Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Amet facilisis magna etiam tempor orci eu lobortis. Consectetur lorem donec massa sapien faucibus et molestie ac.</p>
+                    </section>
+                    <section>
+                        <h2>Consectetur</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Lectus urna duis convallis convallis. Magna eget est lorem ipsum dolor sit amet consectetur adipiscing.</p>
+                    </section>
+                    <section>
+                        <h2>Amet</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Id porta nibh venenatis cras sed felis eget velit. Viverra orci sagittis eu volutpat odio.</p>
+                    </section>
+                    </div>
+                </section>
+                <section id="footer_element">
+                    <h2>Footer Element</h2>
+                    <p>
+                        The <code>&lt;footer&gt;</code> element is used for the bottom footer of webpages. For example, the footer might contain social media
+                        links, copyright information, or contact details. Since this page has none of these, it does not have a <code>&lt;footer&gt;</code>
+                        element.
+                    </p>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
