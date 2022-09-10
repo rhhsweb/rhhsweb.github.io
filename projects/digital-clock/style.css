@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(9, 8, 21);
+}
+
+div {
+    font-family: 'Red Hat Mono', monospace;
+    font-size: 10vw;
+    color: white;
+    text-shadow: 0 0 30px rgb(76, 189, 255);
+}
