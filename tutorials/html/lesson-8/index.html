@@ -9,9 +9,139 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>Tables</h1>
-            </div>
+            <main id="content">
+                <section id="tables">
+                    <h1>Tables</h1>
+                    <p>
+                        The <code>&lt;table&gt;</code> element alows you to display a table in HTML.
+                    </p>
+                    <pre><code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;First Name&lt;/th&gt;
+        &lt;th&gt;Last Name&lt;/th&gt;
+        &lt;th&gt;Email&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;John&lt;/td&gt;
+        &lt;td&gt;Smith&lt;/td&gt;
+        &lt;td&gt;johnsmith@email.com&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Jamie&lt;/td&gt;
+        &lt;td&gt;Sun&lt;/td&gt;
+        &lt;td&gt;jamie_sun@email.com&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Liz&lt;/td&gt;
+        &lt;td&gt;Lee&lt;/td&gt;
+        &lt;td&gt;liz.lee23@email.com&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="code-block-output">
+                        <table>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Smith</td>
+                                <td>johnsmith@email.com</td>
+                            </tr>
+                            <tr>
+                                <td>Jamie</td>
+                                <td>Sun</td>
+                                <td>jamie_sun@email.com</td>
+                            </tr>
+                            <tr>
+                                <td>Liz</td>
+                                <td>Lee</td>
+                                <td>liz.lee23@email.com</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>
+                        Table data for a cell is stored in a <code>&lt;td&gt;</code> element, which is nested within a table row (<code>&lt;tr&gt;</code>).
+                        Table headers (<code>&lt;th&gt;</code>) are also nested within their own table row element. 
+                    </p>
+                </section>
+                <section id="merging_cells">
+                    <h2>Merging Cells</h2>
+                    <p>
+                        In order to make a cell take up more than one cell width of space, the <code>colspan</code> attribute can be used.
+                    </p>
+                    <pre><code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th colspan=&quot;3&quot;&gt;Header&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;one&lt;/td&gt;
+        &lt;td&gt;two&lt;/td&gt;
+        &lt;td&gt;three&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;one&lt;/td&gt;
+        &lt;td colspan=&quot;2&quot;&gt;two&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan=&quot;3&quot;&gt;one&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="output">
+                        <table>
+                            <tr>
+                                <th colspan="3">Header</th>
+                            </tr>
+                            <tr>
+                                <td>one</td>
+                                <td>two</td>
+                                <td>three</td>
+                            </tr>
+                            <tr>
+                                <td>four</td>
+                                <td colspan="2">five</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">six</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>
+                        In order to make a cell take up more than one cell height of space, the <code>colspan</code> attribute can be used.
+                    </p>
+                    <pre><code class="language-html">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;one&lt;/td&gt;
+        &lt;td rowspan=&quot;2&quot;&gt;two&lt;/td&gt;
+        &lt;td rowspan=&quot;3&quot;&gt;three&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;four&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;five&lt;/td&gt;
+        &lt;td&gt;six&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                    <div class="output">
+                        <table>
+                            <tr>
+                                <td>one</td>
+                                <td rowspan="2">two</td>
+                                <td rowspan="3">three</td>
+                            </tr>
+                            <tr>
+                                <td>four</td>
+                            </tr>
+                            <tr>
+                                <td>five</td>
+                                <td>six</td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->

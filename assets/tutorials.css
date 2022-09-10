@@ -30,6 +30,7 @@ code {
 
 .language-html, .language-css, .language-js {
     background-color: rgb(243, 243, 243) !important;
+    max-height: 35rem;
 }
 
 .incorrect-code {
@@ -49,13 +50,23 @@ code {
     margin-bottom: 10px;
 }
 
+.bordered-divs div, .bordered-spans span, .bordered-sections section {
+    border: 2px dashed #511;
+}
+
+
 table {
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 td, th {
     border: 1px solid black;
     padding: 4px 10px;
+}
+
+.centered {
+    margin: auto;
+    display: block;
 }
 
 /* Small width layout */
