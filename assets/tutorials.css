@@ -54,7 +54,6 @@ code {
     border: 2px dashed #511;
 }
 
-
 table {
     margin: 0 auto 20px auto;
 }
@@ -67,6 +66,10 @@ td, th {
 .centered {
     margin: auto;
     display: block;
+}
+
+.fit-container {
+    max-width: 100%;
 }
 
 /* Small width layout */

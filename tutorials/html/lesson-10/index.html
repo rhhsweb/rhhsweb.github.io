@@ -9,9 +9,73 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>Head Element</h1>
-            </div>
+            <main id="content">
+                <section id="head_element">
+                    <h1>Head Element</h1>
+                    <p>
+                        The head element contains important metadata about the website. There should be no visible elements in this section.
+                    </p>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;meta name=&quot;description&quot; content=&quot;This is the description for this website&quot;&gt;
+        &lt;meta name=&quot;keywords&quot; content=&quot;key, words, related, to, this, website&quot;&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;5&quot;&gt; &lt;!-- refresh the current page in 5 seconds --&gt;
+        &lt;meta http-equiv=&quot;refresh&quot; content=&quot;0;URL=newpage.html&quot;&gt; &lt;!-- redirect to a new page --&gt;
+        &lt;meta name=&quot;copyright&quot; content=&quot;Copyright owner's name&quot;&gt;
+        &lt;title&gt;RHHS Web Development&lt;/title&gt;
+        &lt;!-- icons --&gt;
+        &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;/favicon-32x32.png&quot;&gt;
+        &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot; href=&quot;/favicon-16x16.png&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- website content --&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </section>
+                <section id="meta_elements">
+                    <h2>Meta Elements</h2>
+                    <p>
+                        There are many <code>&lt;meta&gt;</code> elements that a webpage can have. Most of them tend to have <code>name</code> that are fairly
+                        self-explanatory. Generally, the most important <code>&lt;meta&gt;</code> elements to have is the one that defines the source code character 
+                        encoding and the one that defines the website viewport.
+                    </p>
+                    <pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
+                    <p>
+                        The <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code> element is used to tell the browser how the HTML file is encoded.
+                    </p>
+                    <p>
+                        The viewport of a website is the screen area in which the website can be seen. This differs to the actual size of webpage, which can be
+                        larger using scrollbars.
+                    </p>
+                    <img class="centered fit-container" src="https://i.stack.imgur.com/qP6La.png">
+                    <p>
+                        On mobile devices, the viewport is rendered with a larger width than the screen, then is scaled down. For example, a 
+                        screen with a width of 640px might have a virtual viewport of 900px. Many websites that are not optimized for mobile 
+                        will break on smaller screens. A larger virtual viewport solves this issue. 
+                    </p>
+                    <p>
+                        If your website is designed for mobile devices  (like this one!), then the <code>&lt; meta name=&quot;viewport&quot;&gt;</code> can 
+                        prevent mobile devices from using a larger viewport.
+                    </p>
+                    <p>
+                        For more information on the different <code>&lt;meta&gt;</code> elements, visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank">&lt;meta&gt;: The metadata element</a>
+                        from MDN Web Docs.
+                    </p>
+                </section>
+                <section id="icons">
+                    <h2>Icons</h2>
+                    <p>
+                        Icons are the small image displayed in the browser tab, browser history, and bookmarks tab. Multiple sized icons are often added just 
+                        in case one device cannot load one icon size.
+                    </p>
+                    <pre><code class="language-html">&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot; href=&quot;/favicon-32x32.png&quot;&gt;
+&lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot; href=&quot;/favicon-16x16.png&quot;&gt;</code></pre>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
