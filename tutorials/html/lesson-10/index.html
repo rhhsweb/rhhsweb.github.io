@@ -20,6 +20,7 @@
     &lt;head&gt;
         &lt;meta charset=&quot;UTF-8&quot;&gt;
         &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
         &lt;meta name=&quot;description&quot; content=&quot;This is the description for this website&quot;&gt;
         &lt;meta name=&quot;keywords&quot; content=&quot;key, words, related, to, this, website&quot;&gt;
         &lt;meta http-equiv=&quot;refresh&quot; content=&quot;5&quot;&gt; &lt;!-- refresh the current page in 5 seconds --&gt;
@@ -40,13 +41,17 @@
                     <p>
                         There are many <code>&lt;meta&gt;</code> elements that a webpage can have. Most of them tend to have <code>name</code> that are fairly
                         self-explanatory. Generally, the most important <code>&lt;meta&gt;</code> elements to have is the one that defines the source code character 
-                        encoding and the one that defines the website viewport.
+                        encoding, defines the website viewport, and enables X-UA-Compatible mode.
                     </p>
                     <pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</code></pre>
+                    <h3>Source Code Character Encoding</h3>
                     <p>
-                        The <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code> element is used to tell the browser how the HTML file is encoded.
+                        The <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code> element is used to tell the browser how the HTML file is encoded. Most of the time,
+                        this will be UTF-8.
                     </p>
+                    <h3>Viewport</h3>
                     <p>
                         The viewport of a website is the screen area in which the website can be seen. This differs to the actual size of webpage, which can be
                         larger using scrollbars.
@@ -58,9 +63,16 @@
                         will break on smaller screens. A larger virtual viewport solves this issue. 
                     </p>
                     <p>
-                        If your website is designed for mobile devices  (like this one!), then the <code>&lt; meta name=&quot;viewport&quot;&gt;</code> can 
+                        If your website is designed for mobile devices  (like this one!), then the <code>&lt;meta name=&quot;viewport&quot;&gt;</code> can 
                         prevent mobile devices from using a larger viewport.
                     </p>
+                    <h3>X-UA-Compatible Mode</h3>
+                    <p>
+                        Old Internet Explorer browsers often do <i>different</i> things than are expected by a regular browser. But, newer version of Internet
+                        Explorer tend to fix these issues. The <code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</code> 
+                        element tells Internet Explorer browsers to use the highest mode possible to render websites.
+                    </p>
+                    <hr>
                     <p>
                         For more information on the different <code>&lt;meta&gt;</code> elements, visit <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" target="_blank">&lt;meta&gt;: The metadata element</a>
                         from MDN Web Docs.
