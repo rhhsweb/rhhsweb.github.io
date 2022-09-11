@@ -9,9 +9,261 @@
         <aside id="side-bar"></aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>Forms</h1>
-            </div>
+            <main id="content">
+                <section id="forms">
+                    <h1>Forms</h1>
+                    <p>
+                        The <code>&lt;form&gt;</code> element allows you to send information to a server.
+                    </p>
+                    <pre><code class="language-html">&lt;form method=&quot;get&quot; action=&quot;&quot;&gt;
+    &lt;label for=&quot;first-name&quot;&gt;Enter your first name: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;first-name&quot; name=&quot;first-name&quot; placeholder=&quot;John&quot; required&gt;
+    &lt;br&gt;
+    &lt;label for=&quot;last-name&quot;&gt;Enter your last name: &lt;/label&gt;
+    &lt;input type=&quot;text&quot; id=&quot;last-name&quot; name=&quot;last-name&quot; placeholder=&quot;Smith&quot; required&gt;
+    &lt;br&gt;
+    &lt;label for=&quot;email-address&quot;&gt;Enter your email: &lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;email-address&quot; name=&quot;email-address&quot; placeholder=&quot;johnsmith@gmail.com&quot;&gt;
+    &lt;br&gt;
+    &lt;input type=&quot;reset&quot; value=&quot;Reset Form&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit Form&quot;&gt;
+&lt;/form&gt;</code></pre>
+                    <div class="code-block-output">
+                        <form method="get" action="">
+                            <label for="first-name">Enter your first name: </label>
+                            <input type="text" id="first-name" placeholder="John" required>
+                            <br>
+                            <label for="last-name">Enter your last name: </label>
+                            <input type="text" id="last-name" placeholder="Smith" required>
+                            <br>
+                            <label for="email-address">Enter your email: </label>
+                            <input type="email" id="email-address" placeholder="johnsmith@gmail.com">
+                            <br>
+                            <input type="reset" value="Reset Form">
+                            <input type="submit" value="Submit Form">
+                        </form>
+                    </div>
+                </section>
+                <section id="form_attributes">
+                    <h2>Form Attributes</h2>
+                    <p>
+                        There are two important form attributes that relate to sending form information: <code>action</code> and <code>method</code>.
+                    </p>
+                    <p>
+                        The <code>action</code> attribute controls which url the information is sent to.
+                    </p>
+                    <pre><code class="language-html">&lt;form action=&quot;index.html&quot;&gt;
+    &lt;!-- form content --&gt;
+&lt;/form&gt;</code></pre>
+                    <p>
+                        The <code>method</code> attribute specifies the  <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank">HTML method</a> 
+                        to send the request with. The two main values are <code>get</code> and <code>post</code>. The <code>get</code> method encodes the form data 
+                        into the <code>action</code> URL. So, <code>get</code> is generally used for less sensitive information.
+                    </p>
+                    <pre><code class="language-html">&lt;form method=&quot;get&quot; action=&quot;index.html&quot;&gt;
+    &lt;!-- form content --&gt;
+&lt;/form&gt;</code></pre>
+                    <p>
+                        Additionally, all inputs (except the submit button) should have a <code>name</code> attribute to identify it when the form information 
+                        gets submitted.
+                    </p>
+                    <pre><code class="language-html">&lt;input type=&quot;number&quot; id=&quot;user-age&quot;&gt;</code></pre>
+                </section>
+                <section id="input_attributes">
+                    <h2>Input Attributes</h2>
+                    <p>
+                        There are three important attributes for all input elements in a form: <code>type</code>, <code>id</code>, and <code>name</code>.
+                        The <code>type</code> attribute is used to specify the input type (as seen in the example above). The <code>id</code> attribute is used 
+                        in combination with the <code>&lt;label&gt;</code> element. The <code>&lt;label&gt;</code> element is meant to describe what an input 
+                        is for.
+                    </p>
+                    <pre><code class="language-html">&lt;label for=&quot;fruit-input&quot;&gt;What is your favourite fruit:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;fruit-input&quot; name=&quot;fav-fruit&quot;&gt;</code></pre>
+                    <div class="code-block-output">
+                        <label for="fruit-input">What is your favourite fruit:</label>
+                        <input type="text" id="fruit-input" name="fav-fruit">
+                    </div>
+                    <p>
+                        The <code>name</code> attribute is used for naming the input value when it gets sent to the server. If the input does not have a name 
+                        attribute, then <b>the input value will not be sent to the server.</b> 
+                    </p>
+                    <p>
+                        There is also the boolean <code>required</code> attribute which can be added to prevent the user from submitting the form without filling 
+                        out an input field.
+                    </p>
+                    <pre><code class="language-html">&lt;form&gt;
+    &lt;input type=&quot;text&quot; required&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+                    <div class="code-block-output">
+                        <form>
+                            <input type="text" required>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </section>
+                <section id="text_input">
+                    <h2>Text Input</h2>
+                    <p>
+                        The text input is an input for getting short text.
+                    </p>
+                    <pre><code class="language-html">&lt;input type=&quot;text&quot; id=&quot;username&quot;&gt;</code></pre>
+                    <div class="code-block-output">
+                        <input type="text" id="username">
+                    </div>
+                    <p>
+                        The <code>placeholder</code> attribute let's you set suggestions or examples for an input.
+                    </p>
+                    <pre><code class="language-html">&lt;label for=&quot;order-details&quot;&gt;Enter your order type and color:&lt;/label&gt;
+&lt;input type=&quot;text&quot; id=&quot;order-details&quot; name=&quot;order-details&quot; placeholder=&quot;double purple&quot;&gt;</code></pre>
+                    <div class="code-block-output">
+                        <label for="order-details">Enter your order type and color:</label>
+                        <input type="text" id="order-details" name="order-details" placeholder="double purple">
+                    </div>
+                    <p>
+                        The minimum and maximum length of text can be set with the <code>minlength</code> and <code>maxlength</code>
+                        attributes.
+                    </p>
+                    <pre><code class="language-html">&lt;form&gt;
+    &lt;input type=&quot;text&quot; minlength=&quot;5&quot; maxlength=&quot;8&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+                    <div class="code-block-output">
+                        <form>
+                            <input type="text" minlength="5" maxlength="8">
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </section>
+                <section id="radio_input">
+                    <h2>Radio Input</h2>
+                    <p>
+                        The radio input is used for selecting one of many options, like a multiple choice question. Radio inputs are linked together by 
+                        having the same <code>name</code> attribute.
+                    </p>
+                    <pre><code class="language-html">&lt;div&gt;
+    &lt;p&gt;Select your drink size.&lt;/p&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;drink-size&quot; id=&quot;size-1&quot; value=&quot;small&quot;&gt;
+    &lt;label for=&quot;size1&quot;&gt;Small&lt;/label&gt;
+
+    &lt;input type=&quot;radio&quot; name=&quot;drink-size&quot; id=&quot;size-2&quot; value=&quot;medium&quot; checked&gt;
+    &lt;label for=&quot;size2&quot;&gt;Medium&lt;/label&gt;
+    
+    &lt;input type=&quot;radio&quot; name=&quot;drink-size&quot; id=&quot;size-3&quot; value=&quot;large&quot;&gt;
+    &lt;label for=&quot;size3&quot;&gt;Large&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="code-block-output">
+                        <div>
+                            <p>Select your drink size.</p>
+                            <input type="radio" name="drink-size" id="size-1" value="small">
+                            <label for="size1">Small</label>
+
+                            <input type="radio" name="drink-size" id="size-2" value="medium" checked>
+                            <label for="size2">Medium</label>
+                            
+                            <input type="radio" name="drink-size" id="size-3" value="large">
+                            <label for="size3">Large</label>
+                        </div>
+                    </div>
+                    <p>
+                        The boolean <code>checked</code> attribute can be added to pre-select one radio input.
+                    </p>
+                </section>
+                <section id="checkbox_input">
+                    <h2>Checkbox Input</h2>
+                    <p>
+                        The checkbox input is used for selecting multiple options. 
+                    </p>
+                    <pre><code class="language-html">&lt;div&gt;
+    &lt;p&gt;What music course are you taking this semester?&lt;/p&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;course&quot; id=&quot;course-1&quot; value=&quot;AMI&quot;&gt; 
+    &lt;label for=&quot;course1&quot;&gt;instrumental music (AMI)&lt;/label&gt;&lt;br&gt;
+
+    &lt;input type=&quot;checkbox&quot; name=&quot;course&quot; id=&quot;course-2&quot; value=&quot;AMR&quot;&gt; 
+    &lt;label for=&quot;course2&quot;&gt;repertoire (AMR)&lt;/label&gt;&lt;br&gt;
+
+    &lt;input type=&quot;checkbox&quot; name=&quot;course&quot; id=&quot;course-3&quot; value=&quot;AMV&quot;&gt; 
+    &lt;label for=&quot;course3&quot;&gt;vocal music (AMV)&lt;/label&gt;&lt;br&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="code-block-output">
+                        <div>
+                            <p>Which music course(s) are you taking this semester?</p>
+                            <input type="checkbox" name="course" id="course-1" value="AMI"> 
+                            <label for="course1">instrumental music (AMI)</label><br>
+
+                            <input type="checkbox" name="course" id="course-2" value="AMR"> 
+                            <label for="course2">repertoire (AMR)</label><br>
+
+                            <input type="checkbox" name="course" id="course-3" value="AMV"> 
+                            <label for="course3">vocal music (AMV)</label><br>
+                        </div>
+                    </div>
+                </section>
+                <section id="dropdown_select_element">
+                    <h2>Dropdown Select Element</h2>
+                    <p>
+                        The <code>&lt;select&gt;</code> element is used for selecting an option from a menu of options. Each <code>&lt;option&gt;</code> is 
+                        nested within the <code>&lt;select&gt;</code> element.
+                    </p>
+                    <pre><code class="language-html">&lt;label for=&quot;drink-select&quot;&gt;Choose a drink:&lt;/label&gt;
+&lt;select name=&quot;drink&quot; id=&quot;drink-select&quot;&gt;
+    &lt;option value=&quot;&quot; disabled selected&gt; -- Select an option -- &lt;/option&gt;
+    &lt;option value=&quot;hot-coffee&quot;&gt;Hot Coffee&lt;/option&gt;
+    &lt;option value=&quot;iced-coffee&quot;&gt;Iced Coffee&lt;/option&gt;
+    &lt;option value=&quot;latte&quot;&gt;Latte&lt;/option&gt;
+    &lt;option value=&quot;hot-chocolate&quot;&gt;Hot Chocolate&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                    <div class="code-block-output">
+                        <label for="drink-select">Choose a drink:</label>
+                        <select name="drink" id="drink-select">
+                            <option value="" disabled selected> -- Select an option -- </option>
+                            <option value="hot-coffee">Hot Coffee</option>
+                            <option value="iced-coffee">Iced Coffee</option>
+                            <option value="latte">Latte</option>
+                            <option value="hot-chocolate">Hot Chocolate</option>
+                        </select>
+                    </div>
+                    <p>
+                        The <code>disabled</code> and <code>selected</code> boolean attributes can be added to one of the <code>&lt;option&gt;</code> elements 
+                        to be used as a message.
+                    </p>
+                </section>
+                <section id="textarea">
+                    <h2>Textarea</h2>
+                    <p>
+                        The <code>&lt;textarea&gt;</code> element is used to collect large pieces of text. The size of text area can be set using the 
+                        <code>cols</code> and <code>rows</code> attributes. A <code>placeholder</code> attribute can also be added.
+                    </p>
+                    <pre><code class="language-html">&lt;textarea rows=&quot;5&quot; cols=&quot;40&quot; name=&quot;bio&quot; placeholder=&quot;Add a bio...&quot;&gt;&lt;/textarea&gt;</code></pre>
+                    <div class="code-block-output">
+                        <textarea rows="5" cols="40" name="bio" placeholder="Add a bio..."></textarea>
+                    </div>
+                </section>
+                <section id="submit_button">
+                    <h2>Submit Button</h2>
+                    <p>
+                        The submit button is used to submit the form.
+                    </p>
+                    <pre><code class="language-html">&lt;form&gt;
+    &lt;input type=&quot;text&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;submit the form&quot;&gt;
+&lt;/form&gt;</code></pre>
+                    <div class="code-block-output">
+                        <form>
+                            <input type="text">
+                            <input type="submit" value="submit the form">
+                        </form>
+                    </div>
+                </section>
+                <section id="other_input_types">
+                    <h2>Other Input Types</h2>
+                    <p>
+                    </p>
+                        There are many other input types that you can use in a form. Visit MDN Web Docs
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types" target="_blank">&lt;input&gt; types</a> for a full list.
+                    </p>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
