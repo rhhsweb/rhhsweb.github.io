@@ -42,7 +42,8 @@ code {
 }
 
 .code-block-output {
-    all: revert;
+    all: initial;
+    display: block;
     border: 1px solid black;
     border-radius: 6px;
     padding: 2px 5px;
