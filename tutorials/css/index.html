@@ -10,10 +10,110 @@
         </aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>CSS</h1>
-                <p>CSS stands for Cascading Style Sheets. It is the language used to describe the appearance of webpages.</p>
-            </div>
+            <main id="content">
+                <section id="css">
+                    <h1>CSS</h1>
+                    <p>
+                        CSS stands for Cascading Style Sheets. It is the language used to describe 
+                        the appearance of webpages. CSS makes good use of the <code>class</code>
+                        attribute, <code>id</code> attribute, and the <a href="/tutorials/html/lesson-7">
+                        elements for content division</a>. CSS defines rules for which elements get
+                        which styles.  
+                    </p>
+                    <p>
+                        This is what CSS looks like:
+                    </p>
+                    <pre><code class="language-css">/* styles.css */
+.purple {
+    color: purple;
+}
+
+.dotted-underline {
+    text-decoration: underline dotted;
+}
+
+section &gt; h2 {
+    font-size: 32px;
+    font-family: 'Segoe UI', Verdana, sans-serif;
+}</code></pre>
+                    <pre><code class="language-html">&lt;!-- index.html --&gt;
+&lt;section&gt;
+    &lt;h2&gt;Lorem Ipsum&lt;/h2&gt;
+    &lt;p class=&quot;purple&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    &lt;span class=&quot;dotted-underline&quot;&gt; Amet facilisis magna etiam tempor orci eu 
+    lobortis. Consectetur lorem donec massa sapien faucibus et molestie ac.&lt;/span&gt;&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+    &lt;h2&gt;Consectetur&lt;/h2&gt;
+    &lt;p class=&quot;purple&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus 
+    urna duis convallis convallis. Magna eget est lorem ipsum dolor sit amet 
+    consectetur adipiscing.&lt;/p&gt;
+&lt;/section&gt;
+&lt;section&gt;
+    &lt;h2&gt;Amet&lt;/h2&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, &lt;span class=&quot;purple dotted-underline&quot;&gt;consectetur
+    adipiscing elit, sed do&lt;/span&gt; eiusmod tempor incididunt ut labore et dolore 
+    magna aliqua. Id porta nibh venenatis cras sed felis eget velit. Viverra orci 
+    sagittis eu volutpat odio.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                    <div class="code-block-output">
+                        <style>
+                            .purple {
+                                color: purple;
+                            }
+
+                            .dotted-underline {
+                                text-decoration: underline dotted;
+                            }
+
+                            .code-block-output > section > h2 {
+                                font-size: 32px;
+                                font-family: 'Segoe UI', Verdana, sans-serif;
+                            }
+                        </style>
+                        <section>
+                            <h2>Lorem Ipsum</h2>
+                            <p class="purple">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            <span class="dotted-underline"> Amet facilisis magna etiam tempor orci eu 
+                            lobortis. Consectetur lorem donec massa sapien faucibus et molestie ac.</span></p>
+                        </section>
+                        <section>
+                            <h2>Consectetur</h2>
+                            <p class="purple">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus 
+                            urna duis convallis convallis. Magna eget est lorem ipsum dolor sit amet 
+                            consectetur adipiscing.</p>
+                        </section>
+                        <section>
+                            <h2>Amet</h2>
+                            <p>Lorem ipsum dolor sit amet, <span class="purple dotted-underline">consectetur
+                            adipiscing elit, sed do</span> eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua. Id porta nibh venenatis cras sed felis eget velit. Viverra orci 
+                            sagittis eu volutpat odio.</p>
+                        </section>
+                    </div>
+                </section>
+                <section id="syntax">
+                    <h2>Syntax</h2>
+                    <p>
+                        CSS syntax follows this pattern:
+                    </p>
+                    <pre><code class="language-css">selector {
+    property: value;
+    property-two: value-two;
+}</code></pre>
+                    <p>
+                        The selector specifies which elements to style. The property and value
+                        specify how the elements should be styled. The property and value are 
+                        separated by a colon and the line ends with a semicolon. And, there can be 
+                        multiple properties and values contained within the curly braces of a 
+                        selector.
+                    </p>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->

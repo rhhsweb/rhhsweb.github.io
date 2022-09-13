@@ -42,7 +42,8 @@ code {
 }
 
 .code-block-output {
-    all: revert;
+    all: initial;
+    display: block;
     border: 1px solid black;
     border-radius: 6px;
     padding: 2px 5px;
@@ -53,7 +54,6 @@ code {
 .bordered-divs div, .bordered-spans span, .bordered-sections section {
     border: 2px dashed #511;
 }
-
 
 table {
     margin: 0 auto 20px auto;
@@ -67,6 +67,10 @@ td, th {
 .centered {
     margin: auto;
     display: block;
+}
+
+.fit-container {
+    max-width: 100%;
 }
 
 /* Small width layout */
