@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CSS | RHHS Web Development</title>
+        <title>Adding Styles | CSS | RHHS Web Development</title>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -11,8 +11,116 @@
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
             <div id="content">
-                <h1>CSS</h1>
-                <p>CSS stands for Cascading Style Sheets. It is the language used to describe the appearance of webpages.</p>
+                <section id="adding_styles">
+                    <h1>Adding Styles</h1>
+                    <p>There are three ways to add or link styles to an HTML webpage.</p>
+                </section>
+                <section id="inline_styling">
+                    <h2>Inline Styling</h2>
+                    <p>
+                        The first way to add CSS is with inline styling. This involves putting styling
+                        inside of an element's <code>style</code> attribute. The following example 
+                        will change the text color of a <code>&lt;p&gt;</code> element.
+                    </p>
+                    <pre><code class="language-html">&lt;p&gt;The quick brown fox jumped over the lazy dog.&lt;/p&gt;
+&lt;p style=&quot;color: red;&quot;&gt;The quick brown fox jumped over the lazy dog.&lt;/p&gt;
+&lt;p style=&quot;color: blue;&quot;&gt;The quick brown fox jumped over the lazy dog.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p>The quick brown fox jumped over the lazy dog.</p>
+                        <p style="color: red;">The quick brown fox jumped over the lazy dog.</p>
+                        <p style="color: blue;">The quick brown fox jumped over the lazy dog.</p>
+                    </div>
+                    <p>
+                        This is not a recommended way to use CSS, since it makes it harder to work with
+                        and manage. When CSS and HTML get mixed together, it becomes harder to make changes
+                        to either. Additionally, inline styling does not allow you to use all the 
+                        features of CSS. To apply the same style to all <code>&lt;p&gt;</code> elements, 
+                        you would have to give each one red text, you would have to change the inline 
+                        styling for each element. 
+                    </p>
+                    <pre><code class="language-html">&lt;p style=&quot;color: red;&quot;&gt;This is the first paragraph.&lt;/p&gt;
+&lt;p style=&quot;color: red;&quot;&gt;And this is the second paragraph.&lt;/p&gt;
+&lt;p style=&quot;color: red;&quot;&gt;This is the final one.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output">
+                        <p style="color: red;">This is the first paragraph.</p>
+                        <p style="color: red;">And this is the second paragraph.</p>
+                        <p style="color: red;">This is the final one.</p>
+                    </div>
+                </section>
+                <section id="internal_stylesheets">
+                    <h2>Internal Stylesheets</h2>
+                    <p>
+                        Another way to add CSS to a webpage is with internal stylesheets. Internal
+                        stylesheets can be added using the <code>&lt;style&gt;</code> element. 
+                        Styling should be placed within the head of the webpage.
+                    </p>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;style&gt;
+            p {
+                color: red;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is the first paragraph.&lt;/p&gt;
+        &lt;p&gt;And this is the second paragraph.&lt;/p&gt;
+        &lt;p&gt;This is the final one.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-1">
+                        <style>
+                            #code-block-1  p {
+                                color: red;
+                            }
+                        </style>
+                        <p>This is the first paragraph.</p>
+                        <p>And this is the second paragraph.</p>
+                        <p>This is the final one.</p>
+                    </div>
+                    <p>
+                        Internal stylesheets allow the full use of CSS, unlike inline styling. While 
+                        it does keep HTML and CSS code relatively separate, it does not let you reuse
+                        the same styles on a different HTML page.
+                    </p>
+                </section>
+                <section id="external_stylesheets">
+                    <h2>External Stylesheets</h2>
+                    <p>
+                        The final way to add CSS is with external stylesheets. Completely separate 
+                        CSS documents can be linked to an HTML page using the <code>&lt;link/&gt;</code>
+                        element within the document head. 
+                    </p>
+                    <pre><code class="language-html">&lt;!-- index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This is the first paragraph.&lt;/p&gt;
+        &lt;p&gt;And this is the second paragraph.&lt;/p&gt;
+        &lt;p&gt;This is the final one.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    <pre><code class="language-css">/* styles.css */
+p {
+    color: red;
+}
+                    </code></pre>
+                    <div class="code-block-output" id="code-block-2">
+                        <link rel="stylesheet" href="styles.css">
+                        <p>This is the first paragraph.</p>
+                        <p>And this is the second paragraph.</p>
+                        <p>This is the final one.</p>
+                    </div>
+                    <p>
+                        External stylesheets allows you to keep CSS code completely separate from
+                        HTML. And, it allows you to reuse styles across multiple webpages just by 
+                        linking it. External stylesheets is the preferred way to add CSS to a webpage.
+                    </p>
+                </section>
             </div>
         </div>
 
