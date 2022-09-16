@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CSS | RHHS Web Development</title>
+        <title>Simple Selectors | CSS | RHHS Web Development</title>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -10,10 +10,297 @@
         </aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>CSS</h1>
-                <p>CSS stands for Cascading Style Sheets. It is the language used to describe the appearance of webpages.</p>
-            </div>
+            <main id="content">
+                <section id="simple_selectors">
+                    <h1>Simple Selectors</h1>
+                    <p>
+                        Let's go over the simple selectors of CSS. All other selectors build off of 
+                        simple selectors. As a quick reminder, CSS selectors are used to select which 
+                        HTML elements you want to style.
+                    </p>
+                    <pre><code class="language-css">selector {
+    property: value;
+}</code></pre>
+                </section>
+                <section id="element_selectors">
+                    <h2>Element Selectors</h2>
+                    <p>
+                        Element selectors are used to select all of a certain type of HTML elements. 
+                        An element selector simply states the element name.
+                    </p>
+                    <pre><code class="language-css">element {
+    /* CSS styles go in here. */
+}</code></pre>
+                    <p>
+                        For example, if you want to select all <code>&lt;h2&gt;</code> elements 
+                        and bold them, it would look like this: 
+                    </p>
+                    <pre><code class="language-css">/* CSS */
+h2 { /* select all h2 elements. */
+    font-weight: bold; /* bold the selected element(s). */
+}</code></pre>
+                    <pre><code class="language-html">&lt;!-- HTML --&gt;
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;p&gt;Paragraph 1&lt;/p&gt;
+&lt;h2&gt;Subheading 1&lt;/h2&gt;
+&lt;p&gt;Paragraph 2&lt;/p&gt;
+&lt;h2&gt;Subheading 2&lt;/h2&gt;
+&lt;p&gt;Paragraph 3&lt;/p&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-1">
+                        <style>
+                            /* CSS */
+                            #code-block-1 h2 {
+                                font-weight: bold;
+                            }
+                        </style>
+                        <!-- HTML -->
+                        <h1>Heading 1</h1>
+                        <p>Paragraph 1</p>
+                        <h2>Subheading 1</h2>
+                        <p>Paragraph 2</p>
+                        <h2>Subheading 2</h2>
+                        <p>Paragraph 3</p>
+                    </div>
+                </section>
+                <section id="id_selectors">
+                    <h2>ID Selectors</h2>
+                    <p>
+                        ID selectors select the single HTML element with an ID. It cannot select more 
+                        than one element since IDs must be unique for each element. An ID selector 
+                        starts with a <code>#</code> followed by the ID name.
+                    </p>
+                    <pre><code class="language-css">#id-name {
+    /* CSS styles go here. */
+}</code></pre>
+                    <p>
+                        For example, if you want to only bold the second <code>&lt;p&gt;</code> element, 
+                        it would look like this:
+                    </p>
+                    <pre><code class="language-css">/* CSS */
+#code-block-2 #paragraph-2 {
+    font-weight: bold;
+}</code></pre>
+                    <pre><code class="language-html">&lt;!-- HTML --&gt;
+&lt;h1 id=&quot;page-title&quot;&gt;My TED Talk&lt;/h1&gt;
+&lt;p id=&quot;paragraph-1&quot;&gt;Cats are great.&lt;/p&gt;
+
+&lt;h2 id=&quot;subheading-1&quot;&gt;The Truth&lt;/h2&gt;
+&lt;p id=&quot;paragraph-2&quot;&gt;Dogs are better.&lt;/p&gt;
+
+&lt;h2 id=&quot;subheading-2&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p id=&quot;paragraph-3&quot;&gt;Thank you for coming to my ted talk.&lt;/p&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-2">
+                        <style>
+                            /* CSS */
+                            #code-block-2 #paragraph-2 {
+                                font-weight: bold;
+                            }
+                        </style>
+                        <!-- HTML -->
+                        <h1 id="page-title">My TED Talk</h1>
+                        <p id="paragraph-1">Cats are great.</p>
+                        <h2 id="subheading-1">The Truth</h2>
+                        <p id="paragraph-2">Dogs are better.</p>
+                        <h2 id="subheading-2">Conclusion</h2>
+                        <p id="paragraph-3">Thank you for coming to my ted talk.</p>
+                    </div>
+                    <p>
+                        In practice, you do <em>not</em> want to give all your elements IDs. IDs are 
+                        usually only given to elements that need them.
+                    </p>
+                </section>
+                <section id="class_selectors">
+                    <h2>Class Selectors</h2>
+                    <p>
+                        Class selectors select all HTML elements that have a particular class. A class 
+                        selector starts with a <code>.</code> followed by the class name. Since elements 
+                        can have multiple classes, they can be affected by multiple class selectors.
+                    </p>
+                    <pre><code class="language-css">/* CSS */
+.red { /* select elements with the 'red' class. */
+    color: red; /* give selected elements red text. */
+}
+
+.bold { /* select elements with the 'bold' class. */
+    font-weight: bold; /* give selected elements bold text. */
+}</code></pre>
+                    <pre><code class="language-html">&lt;!-- HTML --&gt;
+&lt;h1 class=&quot;red bold&quot;&gt;Welcome to my Website!&lt;/h1&gt;
+&lt;p class=&quot;red&quot;&gt;Hello website visitors! How do you do?&lt;/p&gt;
+
+&lt;h2 class=&quot;bold&quot;&gt;About Me&lt;/h2&gt;
+&lt;p class=&quot;red&quot;&gt;I am a happy web developer!&lt;/p&gt;
+
+&lt;h2 class=&quot;bold&quot;&gt;My Favourite Colours&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li class=&quot;red&quot;r&gt;Red&lt;/li&gt;
+    &lt;li&gt;Black&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-3">
+                        <style>
+                            /* CSS */
+                            #code-block-3 .red { /* select elements with the 'red' class. */
+                                color: red; /* give selected elements red text. */
+                            }
+
+                            #code-block-3 .bold { /* select elements with the 'bold' class. */
+                                font-weight: bold; /* give selected elements bold text. */
+                            }
+                        </style>
+                        <!-- HTML -->
+                        <h1 class="red bold">Welcome to my Website!</h1>
+                        <p class="red">Hello website visitors! How do you do?</p>
+                        <h2 class="bold">About Me</h2>
+                        <p class="red">I am a happy web developer!</p>
+                        <h2 class="bold">My Favourite Colours</h2>
+                        <ul>
+                            <li class="red"r>Red</li>
+                            <li>Black</li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="pseudo-class_selectors">
+                    <h2>Pseudo-class Selectors</h2>
+                    <p>
+                        Pseudo-class selectors select elements that are in a certain state. For example,
+                        when an element is being hovered. A pseudo-class selector actually extends 
+                        the other simple selectors. 
+                    </p>
+                    <pre><code class="language-css">element:hover {
+
+}
+
+.class-name:hover {
+
+}
+
+#id-name:hover {
+    
+}</code></pre>
+                    <p>
+                        The pseudo-class selector overrides any default styling. When the selected element
+                        is no longer in the state, it reverts back to the default styling.
+                    </p>
+                    <pre><code class="language-css">#my-paragraph {
+    color: blue;
+}
+
+#my-paragraph:hover {
+    color: red;
+}</code></pre>
+                    <pre><code class="language-html">&lt;p id=&quot;my-paragraph&quot;&gt;Hover me!&lt;/p&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-4">
+                        <style>
+                            #code-block-4 > #my-paragraph {
+                                color: blue;
+                            }
+
+                            #code-block-4 > #my-paragraph:hover {
+                                color: red;
+                            }
+                        </style>
+                        <p id="my-paragraph">Hover me!</p>
+                    </div>
+                    <p>
+                        Some elements may have more states than other elements do. For example, the anchor element.
+                    </p>
+                    </section>
+                    <section id="styling_anchor_elements">
+                    <h3>Styling Anchor Elements</h3>
+                    <p>
+                        Anchor elements have four relevant pseudo-class selectors: <code>:link</code>, <code>:visited</code>,
+                        <code>:hover</code>, and <code>:active</code>.
+                    </p>
+                    <pre><code class="language-css">
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: orange;
+}
+
+a:active {
+    color: yellow;
+}
+                    </code></pre>
+                    <pre><code class="language-html">&lt;a href=&quot;#styling_anchor_elements&quot;&gt;Click me&lt;/a&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-5">
+                        <style>
+                            #code-block-5 > a:link {
+                                color: red;
+                            }
+                            
+                            #code-block-5 > a:visited {
+                                color: green;
+                            }
+
+                            #code-block-5 > a:hover {
+                                color: orange;
+                            }
+
+                            #code-block-5 > a:active {
+                                color: yellow;
+                            }
+                        </style>
+                        <a href="#styling_anchor_elements">Click me</a>
+                    </div>
+                </section>
+                <section id="style_priority">
+                    <h2>Style Priority</h2>
+                    <p>
+                        CSS files are run from top to bottom. If the same selector is used multiple times
+                        throughout the file, the bottom one takes priority.
+                    </p>
+                    <pre><code class="language-css">#id-name-1 {
+    color: blue; /* Ignored */
+}
+
+#id-name-1 {
+    color: green; /* Ignored */
+}
+    
+#id-name-1 {
+    color: red; /* This takes priority */
+}</code></pre>
+                    <p>
+                        If multiple element, class, and ID selectors target an element, the class will take 
+                        priority over element selectors and ID will take priority over class selectors.
+                    </p>
+                    <pre><code class="language-css">#paragraph-1 {
+    color: red; /* This takes priority */
+}
+
+p {
+    color: blue; /* Ignored */
+}
+
+.paragraph {
+    color: green; /* Ignored */
+}</code></pre>
+                    <pre><code class="language-html">&lt;p class=&quot;paragraph&quot; id=&quot;paragraph-1&quot;&gt;Some text&lt;/p&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-6">
+                        <style>
+                            #code-block-6 > #paragraph-1 {
+                                color: red; /* This takes priority */
+                            }
+
+                            #code-block-6 > p {
+                                color: blue; /* Ignored */
+                            }
+
+                            #code-block-6 > .paragraph {
+                                color: green; /* Ignored */
+                            }
+                        </style>
+                        <p class="paragraph" id="paragraph-1">Some text</p>
+                    </div>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
