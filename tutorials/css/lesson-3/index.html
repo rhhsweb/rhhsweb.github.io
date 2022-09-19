@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>CSS | RHHS Web Development</title>
+        <title>Color | CSS | RHHS Web Development</title>
     </head>
     <body>
         <!-- Navigation Bar -->
@@ -10,10 +10,371 @@
         </aside>
         <!-- Main Content -->
         <div class="pt-4" id="page-wrapper">
-            <div id="content">
-                <h1>CSS</h1>
-                <p>CSS stands for Cascading Style Sheets. It is the language used to describe the appearance of webpages.</p>
-            </div>
+            <main id="content">
+                <section id="color">
+                    <h1>Color</h1>
+                    <p>There are many things to color and multiple ways to manipulate colors with CSS.</p>
+                </section>
+                <section id="background">
+                    <h2>Background</h2>
+                    <p>
+                        The <code>background-color</code> property is used to change the background color of an element.
+                    </p>
+                    <pre><code class="language-css">h2 {
+    background-color: yellow;
+}</code></pre>
+                    <pre><code class="language-html">&lt;h2&gt;Hi&lt;/h2&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-1">
+                        <style>
+                            #code-block-1 div {
+                                background-color: yellow;
+                            }
+                        </style>
+                        <div>
+                            <h2>Hi</h2>
+                            <p>Hello there</p>
+                        </div>
+                    </div>
+                    <h3>Background Image</h3>
+                    <p>
+                        The <code>background-image</code> property is used to set the background to an image.
+                    </p>
+                    <pre><code class="language-css">div {
+    background-image: url(https://i.pinimg.com/originals/ce/cc/88/cecc88bacecba631d1bc7a5272313f1d.jpg)
+}</code></pre>
+                    <pre><code class="language-html">&lt;div&gt;
+    &lt;h2&gt;Hi&lt;/h2&gt;
+    &lt;p&gt;Hello there&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-2">
+                        <style>
+                            #code-block-2 div {
+                                background-image: url(https://i.pinimg.com/originals/ce/cc/88/cecc88bacecba631d1bc7a5272313f1d.jpg)
+                            }
+                        </style>
+                        <div>
+                            <h2>Hi</h2>
+                            <p>Hello there</p>
+                        </div>
+                    </div>
+                    <p>
+                        There are also many properties relating to whether the background should repeat, stretch, and more.
+                    </p>
+                    <h3>Gradient</h3>
+                    <p>
+                        The <code>linear-gradient</code> is a function that can be used as the value of the <code>background-image</code> 
+                        property to create a gradient background.
+                    </p>
+                    <pre><code class="language-css">background-image: linear-gradient(angle, color1, color2, ...);</code></pre>
+                    <pre><code class="language-css">.gradient-1 {
+    background-image: linear-gradient(90deg, red, yellow);
+}
+
+.gradient-2 {
+    background-image: linear-gradient(180deg, cyan, yellow);
+}
+
+.gradient-3 {
+    background-image: linear-gradient(20deg, red, yellow, green);
+}
+
+.rainbow {
+    /* Use as many colors as you want */
+    background-image: linear-gradient(90deg, red, orange, yellow, green, blue, violet);
+}</code></pre>
+                    <div class="code-block-output" id="code-block-3">
+                        <style>
+                            #code-block-3 div {
+                                height: 40px;
+                                margin: 2%;
+                                border: 1px solid black;
+                            }
+
+                            #code-block-3 .gradient-1 {
+                                background-image: linear-gradient(90deg, red, yellow);
+                            }
+
+                            #code-block-3 .gradient-2 {
+                                background-image: linear-gradient(180deg, cyan, yellow);
+                            }
+
+                            #code-block-3 .gradient-3 {
+                                background-image: linear-gradient(20deg, red, yellow, green);
+                            }
+
+                            #code-block-3 .rainbow {
+                                background-image: linear-gradient(90deg, red, orange, yellow, green, blue, violet);
+                            }
+                        </style>
+                        <div class="gradient-1"></div>
+                        <div class="gradient-2"></div>
+                        <div class="gradient-3"></div>
+                        <div class="rainbow"></div>
+                    </div>
+                    <p>
+                        You can also set at which point the colors should be placed. The percentage defines at what point in the 
+                        gradient that the color is complete and not mixed.
+                    </p>
+                    <pre><code class="language-css">.gradient-4 {
+    background-image: linear-gradient(
+        90deg, 
+        red 0%,
+        yellow 10%,
+        green 100%
+    );
+}</code></pre>
+                    <div class="code-block-output" id="code-block-4">
+                        <style>
+                            #code-block-4 div {
+                                height: 40px;
+                                margin: 2%;
+                                border: 1px solid black;
+                            }
+
+                            #code-block-4 .gradient-4 {
+                                background-image: linear-gradient(
+                                    90deg, 
+                                    red 0%,
+                                    yellow 10%,
+                                    green 100%
+                                );
+                            }
+
+                            #code-block-4 .indicator {
+                                background-image: linear-gradient(
+                                    90deg, 
+                                    red 0%,
+                                    transparent 1%,
+                                    transparent 9%,
+                                    yellow 10%,
+                                    transparent 11%,
+                                    transparent 99%,
+                                    green 100%
+                                );
+                            }
+                        </style>
+                        <div class="gradient-4"></div>
+                        <p>These are the positions where the colors are unmixed:</p>
+                        <div class="indicator"></div>
+                    </div>
+                    <p>
+                        You can also create a repeating linear radient. Each repetition ends at the point
+                        that the last color is unmixed.
+                    </p>
+                    <pre><code class="language-css">.repeating-gradient {
+    background-image: repeating-linear-gradient(
+        90deg,
+        red 0%,
+        yellow 10%,
+        green 15%
+    );
+}</code></pre>
+                    <div class="code-block-output" id="code-block-5">
+                        <style>
+                            #code-block-5 .repeating-gradient {
+                                height: 40px;
+                                margin: 2%;
+                                border: 1px solid black;
+                                background-image: repeating-linear-gradient(
+                                    90deg,
+                                    red 0%,
+                                    yellow 10%,
+                                    green 15%
+                                );
+                            }
+                        </style>
+                        <div class="repeating-gradient"></div>
+                    </div>
+                </section>
+                <section id="types_of_color_values">
+                    <h2>Types of Color Values</h2>
+                    <p>
+                        So far, we have only been using the color keywords names. But, there are other ways to define colors.
+                    </p>
+                    <pre><code class="language-css">#id-1 {
+    background-color: lightskyblue; /* color keywords */
+}
+
+#id-2 {
+    background-color: rgb(255, 0, 100); /* RGB() values */
+}
+
+#id-3 {
+    background-color: #a9d22e; /* 6-digit HEX codes */
+}
+
+#id-4 {
+    background-color: #a7c; /* 3-digit HEX codes, (#aa77cc) */
+}
+
+#id-5 {
+    /* hsl() values (hue, saturation, lightness)
+        Hue is 0 to 360.
+        Saturation is 0% to 100%.
+        Lightness is 0% to 100%.
+    */
+    background-color: hsl(39, 100%, 50%);
+}</code></pre>
+                    <div class="code-block-output" id="code-block-6">
+                        <style>
+                            #code-block-6 div {
+                                height: 40px;
+                                margin: 2%;
+                                border: 1px solid black;
+                            }
+
+                            #code-block-6 #id-1 {
+                                background-color: lightskyblue;
+                            }
+
+                            #code-block-6 #id-2 {
+                                background-color: rgb(255, 0, 100);
+                            }
+
+                            #code-block-6 #id-3 {
+                                background-color: #a9d22e; 
+                            }
+
+                            #code-block-6 #id-4 {
+                                background-color: #a7c; /* #aa77ccc */
+                            }
+
+                            #code-block-6 #id-5 {
+                                background-color: hsl(39, 100%, 50%);
+                            }
+                        </style>
+                        <div id="id-1"></div>
+                        <div id="id-2"></div>
+                        <div id="id-3"></div>
+                        <div id="id-4"></div>
+                        <div id="id-5"></div>
+                    </div>
+                    <p>
+                        You can also use <code>rgba()</code> if you want to make the color transparent.
+                        The <code>a</code> or alpha value can be a value from 0 (transparent) to 1 (opaque).
+                    </p>
+                    <pre><code class="language-css">.background {
+    background-color: cyan;
+}
+
+.class-1 {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+
+.class-2 {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+.class-3 {
+    background-color: rgba(255, 0, 0, 0.6);
+}
+
+.class-4 {
+    background-color: rgba(255, 0, 0, 0.8);
+}</code></pre>
+                    <pre><code class="language-html">&lt;div class=&quot;background&quot;&gt;
+    &lt;div class=&quot;class-1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;class-2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;class-3&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;class-4&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-6">
+                        <style>
+                            #code-block-6 div {
+                                height: 40px;
+                                margin: 5px;
+                                border: 1px solid black;
+                            }
+
+                            #code-block-6 .background {
+                                height: 200px;
+                                background-color: cyan;
+                            }
+
+                            #code-block-6 .class-1 {
+                                background-color: rgba(255, 0, 0, 0.2);
+                            }
+
+                            #code-block-6 .class-2 {
+                                background-color: rgba(255, 0, 0, 0.4);
+                            }
+
+                            #code-block-6 .class-3 {
+                                background-color: rgba(255, 0, 0, 0.6);
+                            }
+
+                            #code-block-6 .class-4 {
+                                background-color: rgba(255, 0, 0, 0.8);
+                            }
+                        </style>
+                        <div class="background">
+                            <div class="class-1"></div>
+                            <div class="class-2"></div>
+                            <div class="class-3"></div>
+                            <div class="class-4"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id="filters">
+                    <h2>Filter</h2>
+                    <p>
+                        The <code>filter</code> property can be used to change all the colors within an element,
+                        including images. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" target="_blank">MDN Web Docs: filter</a>
+                        for more filters.
+                    </p>
+                    <pre><code class="language-css">.filtered {
+    filter: blur(5px);
+    filter: brightness(1.1); 
+    filter: hue-rotate(100deg);
+}</code></pre>
+                    <div class="code-block-output" id="code-block-7">
+                        <style>
+                            #code-block-7 div {
+                                margin: auto;
+                                width: fit-content;
+                            }
+                            
+                            #code-block-7 .filtered {
+                                filter: blur(5px);
+                                filter: brightness(1.1); 
+                                filter: hue-rotate(100deg);
+                            }
+                        </style>
+                        <div>
+                            Original
+                            <img class="fit-container" src="https://i.pinimg.com/originals/af/51/66/af516634365b59ca6b98e76429dd00cf.png">
+                            <img class="filtered fit-container" src="https://i.pinimg.com/originals/af/51/66/af516634365b59ca6b98e76429dd00cf.png">
+                            Filtered
+                        </div>
+                    </div>
+                </section>
+                <section id="opacity">
+                    <h2>Opacity</h2>
+                    <p>
+                        The <code>opacity</code> property changes the opacity of an element and all its contents. Opacity should be a value from 0 to 1.
+                    </p>
+                    <pre><code class="language-css">.wrapper {
+    background-color: yellow;
+    opacity: 0.4;
+}</code></pre>
+                    <pre><code class="language-html">&lt;div class=&quot;wrapper&quot;&gt;
+    &lt;h1&gt;Hello there&lt;/h1&gt;
+    &lt;p&gt;The quick brown fox jumps over the lazy dog.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    <div class="code-block-output" id="code-block-8">
+                        <style>
+                            #code-block-8 .wrapper {
+                                background-color: yellow;
+                                opacity: 0.4;
+                            }
+                        </style>
+                        <div class="wrapper">
+                            <h1>Hello there</h1>
+                            <p>The quick brown fox jumps over the lazy dog.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
 
         <!-- Scripts -->
