@@ -1,11 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     height: 100vh;
+    overflow: hidden;
+}
+
+.container {   
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Center items */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    flex-direction: column;
+}
+
+.notif {
+    height: 100%;
+    padding-top: 10vh;
+}
+
+.notif div {
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    padding: 1em;
+    border-radius: 5px;
+    display: inline;
+    opacity: 0;
+}
+
+button {
+    display: block;
+    margin-left: auto; 
+    margin-right: 5px;
+    margin-bottom: 0.5rem;
+    color: white;
+    background-color: rgb(100, 100, 100);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
 }
 
 table {
@@ -18,7 +60,6 @@ td {
     border: 2px solid rgb(180, 180, 180);
     text-align: center;
     font-weight: bold;
-    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
 }
 
@@ -45,5 +86,6 @@ td {
     td {
         width: 40px;
         height: 40px;
+        font-size: 1.5rem;
     }
 }
