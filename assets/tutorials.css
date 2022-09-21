@@ -73,6 +73,24 @@ td, th {
     max-width: 100%;
 }
 
+#content a {
+    text-decoration: none;
+}
+
+#downloads a { 
+    text-decoration: underline black;
+    display: inline-block;
+}
+
+#downloads .button {
+    padding: 10px;
+    background-color: #ccc;
+}
+
+.button > .icon {
+    margin-right: 6px;
+}
+
 /* Small width layout */
 
 @media only screen and (max-width: 800px) {
@@ -91,11 +109,6 @@ td, th {
         margin: 0;
     }
 }
-
-#content a:hover {
-    text-decoration: none;
-}
-
 
 /* Mobile layout */
 

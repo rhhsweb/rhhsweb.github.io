@@ -21,7 +21,7 @@ body {
 .button {
     color: rgb(0, 11, 24);
 	background-color: #aaaaaa;
-    width: 80px;
+    min-width: 80px;
     height: 40px;
     border-radius: 6px;
     display: flex;
@@ -30,7 +30,7 @@ body {
     border: none;
 }
 
-#top-bar a {
+#top-bar a { 
     text-decoration: none !important;
 }
 
