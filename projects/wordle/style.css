@@ -23,12 +23,9 @@ body {
     flex-direction: column;
 }
 
-.notif {
-    height: 100%;
-    padding-top: 10vh;
-}
-
-.notif div {
+#notif {
+    position: absolute;
+    top: 5vh;
     color: white;
     font-weight: bold;
     background-color: black;
@@ -39,15 +36,19 @@ body {
 }
 
 button {
-    display: block;
-    margin-left: auto; 
-    margin-right: 5px;
-    margin-bottom: 0.5rem;
     color: white;
     background-color: rgb(100, 100, 100);
     border: none;
     padding: 0.5rem;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-game-btn {
+    display: block;
+    margin-left: auto; 
+    margin-right: 5px;
+    margin-bottom: 0.5rem;
 }
 
 table {
@@ -63,29 +64,61 @@ td {
     font-size: 2rem;
 }
 
+@media only screen and (max-width: 400px) {
+    td {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
 .grey {
-    color: white;
-    background-color: rgb(119,125,125);
+    color: white !important;
+    background-color: rgb(119,125,125) !important;
     border: 2px solid rgb(119,125,125);
 
 }
 
 .yellow {
-    color: white;
-    background-color: rgb(202,185,79);
+    color: white !important;
+    background-color: rgb(202,185,79) !important;
     border: 2px solid rgb(202,185,79);
 }
 
 .green {
-    color: white;
-    background-color: rgb(69,178,104);
+    color: white !important;
+    background-color: rgb(69,178,104) !important;
     border: 2px solid rgb(69,178,104);
 }
 
+/* Keyboard */
+#keyboard {
+    margin-top: 1rem;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+}
+
+.keyboard-row > button {
+    margin: 3px;
+    min-width: 3rem;
+    height: 3rem;
+    color: black;
+    background-color: rgb(200, 200, 200);
+}
+
+@media only screen and (max-width: 580px) {
+    .keyboard-row > button {
+        margin: 2px;
+        min-width: 2rem;
+    }
+}
+
 @media only screen and (max-width: 400px) {
-    td {
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
+    .keyboard-row > button {
+        margin: 2px;
+        min-width: 1rem;
     }
 }

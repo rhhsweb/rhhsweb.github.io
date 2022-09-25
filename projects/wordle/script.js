@@ -24,7 +24,7 @@ for (let i = 0; i < 6; i++) {
     boardCells.push(rowArray);
 }
 
-// Checks if a keyboard event is valid
+// Checks if a key pressed event is valid
 function isValidKeyPressed(event) {
     if (event.repeat == true || event.ctrlKey == true) {
         return false;
@@ -81,6 +81,7 @@ function giveClues() {
     // Change CSS
     for (let i = 0; i < 5; i++) {
         boardCells[wordsGuessed][i].classList.add(colour[i]);
+        allKeys[currentGuess[i]].classList.add(colour[i]);
     }
 }
 
@@ -97,47 +98,70 @@ function displayMessage(message, permanent) {
     }
 }
 
+// Runs when a user enters a letterr
+function addLetter(key) {
+    if (gameOver) return;
+
+    if (currentGuess.length < 5) {
+        currentGuess += key.toUpperCase();
+        updateGuess();
+    }
+}
+
+// Runs when user hits backspace
+function backspace() {
+    if (gameOver) return;
+
+    currentGuess = currentGuess.substring(0, currentGuess.length - 1);
+    updateGuess();
+}
+
+// Runs when user hits enter
+function enterWord() {
+    if (gameOver) return;
+
+    // Check if it's a valid word
+    if (currentGuess.length < 5) {
+        displayMessage("Not enough letters", false);
+        return;
+    }
+    if (!validGuesses.has(currentGuess)) {
+        displayMessage("Not in word list", false);
+        return;
+    }
+
+    // Change colour of text
+    giveClues();
+    wordsGuessed++;
+
+    // Guess is correct
+    if (currentGuess == answer) {
+        displayMessage("Well done!", true);
+        gameOver = true;
+    }
+    // Out of guesses
+    else if (wordsGuessed == 6) {
+        displayMessage(answer, true);
+        gameOver = true;
+    }
+    
+    // Reset for next word
+    currentGuess = "";
+}
+
 function keyPressed(event) {
-    if (!isValidKeyPressed(event) || gameOver) {
+    if (!isValidKeyPressed(event)) {
         return;
     }
     if (event.key == "Enter") {
-        // Check if it's a valid word
-        if (currentGuess.length < 5) {
-            displayMessage("Not enough letters", false);
-            return;
-        }
-        if (!validGuesses.has(currentGuess)) {
-            displayMessage("Not in word list", false);
-            return;
-        }
-
-        // Change colour of text
-        giveClues();
-        wordsGuessed++;
-
-        // win/lose
-        if (currentGuess == answer) {
-            displayMessage("Well done!", true);
-            gameOver = true;
-        }
-        else if (wordsGuessed == 6) {
-            displayMessage(answer, true);
-            gameOver = true;
-        }
-
-        currentGuess = "";
+        enterWord();
     } 
     else if (event.key == "Backspace") {
-        currentGuess = currentGuess.substring(0, currentGuess.length - 1);
-        updateGuess();
+        backspace();
     }
     // Key is a letter
     else {
-        if (currentGuess.length < 5) {
-            currentGuess += event.key.toUpperCase();
-            updateGuess();
-        }
+        addLetter(event.key);
     }
 }
 
@@ -150,6 +174,11 @@ function newGame() {
             boardCells[i][j].classList.remove("grey", "yellow", "green");
         }   
     }
+
+    // Update keyboard
+    Object.values(allKeys).forEach((keyElement) => {
+        keyElement.classList.remove("grey", "yellow", "green");
+    });
 
     // Reset variables
     wordsGuessed = 0;
