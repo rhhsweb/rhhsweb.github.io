@@ -43,6 +43,16 @@
                         <li><a class="nav-link js-tutorial" href="/tutorials/js/lesson-8">AJAX</a></li>
                     </ul>
                 </div>
+                <div>
+                    <header>JS Projects</header>
+                    <ul>
+                        <li><a class="nav-link" href="/projects/digital-clock">Digital Clock</a></li>
+                        <li><a class="nav-link" href="/projects/rock-paper-scissors">Rock Paper Scissors</a></li>
+                        <li><a class="nav-link" href="/projects/unit-converter">Unit Converter</a></li>
+                        <li><a class="nav-link" href="/projects/wordle">Wordle</a></li>
+                        <li><a class="nav-link" href="/projects/dictionary">Dictionary</a></li>
+                    </ul>
+                </div>
             </nav>
         </aside>
         <div id="scripts">
