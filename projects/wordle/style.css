@@ -107,6 +107,7 @@ td {
     height: 3rem;
     color: black;
     background-color: rgb(200, 200, 200);
+    border: 2px solid rgb(200, 200, 200);
 }
 
 @media only screen and (max-width: 580px) {
