@@ -75,20 +75,20 @@ td {
 .grey {
     color: white !important;
     background-color: rgb(119,125,125) !important;
-    border: 2px solid rgb(119,125,125);
+    border: 2px solid rgb(119,125,125) !important;
 
 }
 
 .yellow {
     color: white !important;
     background-color: rgb(202,185,79) !important;
-    border: 2px solid rgb(202,185,79);
+    border: 2px solid rgb(202,185,79) !important;
 }
 
 .green {
     color: white !important;
     background-color: rgb(69,178,104) !important;
-    border: 2px solid rgb(69,178,104);
+    border: 2px solid rgb(69,178,104) !important;
 }
 
 /* Keyboard */
