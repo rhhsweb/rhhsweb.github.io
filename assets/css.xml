@@ -51,7 +51,7 @@
                     <header>CSS Projects</header>
                     <ul>
                         <li><a class="nav-link" href="/projects/food-delivery-form">Food Delivery Form</a></li>
-                        <!-- <li><a class="nav-link" href="/projects/fifa-table">FIFA Table</a></li> -->
+                        <li><a class="nav-link" href="/projects/tournament-table">Tournament Table</a></li>
                         <li><a class="nav-link" href="/projects/space-animation">Space Animation</a></li>
                         <li><a class="nav-link" href="/projects/media-queries">Media Queries</a></li>
                     </ul>
