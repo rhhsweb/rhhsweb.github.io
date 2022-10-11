@@ -1,6 +1,7 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "RHHSWeb Development",
+    "short_name": "RHHSWeb Development",
+    "description": "Welcome to the official RHHSWeb Development website!",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
