@@ -39,10 +39,10 @@
                     <ul>
                         <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-5">Box Model</a></li>
                         <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-6">Element Alignment</a></li>
-                        <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-7">Images/backgrounds</a></li>
+                        <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-7">Images &amp; Backgrounds</a></li>
                         <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-8">Flexbox</a></li>
                         <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-9">Grid</a></li>
-                        <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-10">Transitions and Animations</a></li>
+                        <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-10">Transitions &amp; Animations</a></li>
                         <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-11">Media Queries</a></li>
                         <li><a class="nav-link css-tutorial" href="/tutorials/css/lesson-12">Advanced Selectors</a></li>
                     </ul>
