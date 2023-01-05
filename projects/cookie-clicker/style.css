@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* remove default margin around body */
+    margin: 0;
+
+    /* tells to center elements within the body */
+    display: flex;
+    /* set the main axis to be vertical, cross axis to be horizontal */
+    flex-direction: column; 
+    justify-content: center; /* center main axis (vertically) */
+    align-items: center; /* center cross axis (horizontally) */
+
+    background-color: lightskyblue;
+    font-family: Calibri;
+
+    height: 100vh;
+    overflow: hidden; /* remove scrollbar */
+}
+
+header {
+    /* put at top of page */
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(50, 50, 50, 0.3);
+    width: 100%;
+
+    /* center text within the header */
+    text-align: center;
+
+    font-size: 21px;
+}
+
+h1 {
+    margin: 0;
+    margin-top: 8px;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 8px;
+}
+
+h3 {
+    margin: 6px 0 4px 0;
+}
+
+#cookie-counter {
+    font-weight: normal;
+}
+
+#cookie {
+    height: 60vh;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 100%;
+    cursor: pointer;
+    
+    animation: spin infinite 20s linear;
+    transition: scale 50ms ease-in-out,
+                box-shadow 200ms ease-in-out;
+    
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cookie:hover {
+    scale: 1.03;
+    box-shadow: 0 0 12px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150%;
+    overflow: hidden;
+    line-height: 0;
+    rotate: 180deg;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200px;
+}
+
+.wave .shape-fill {
+    fill: white;
+}
+
+.wave .shape-fill:nth-child(1) {
+    animation: slide-right infinite 24s ease-in alternate,
+            fade-in 1 5s linear;
+}
+
+.wave .shape-fill:nth-child(2) {
+    animation: slide-right infinite 26s ease-in-out alternate,
+            fade-in 1 5s linear;
+}
+
+.wave .shape-fill:nth-child(3) {
+    animation: slide-right infinite 22s ease-out alternate-reverse,
+            fade-in 1 5s linear;
+}
+
+.wave .shape-fill:nth-child(4) {
+    animation: slide-right infinite 19s ease-in alternate-reverse,
+            fade-in 1 5s linear;
+}
+
+.wave .shape-fill:nth-child(5) {
+    animation: slide-right infinite 18s ease-out alternate-reverse,
+            fade-in 1 5s linear;
+}
+
+.wave .shape-fill:nth-child(6) {
+    animation: slide-right infinite 17s ease-in-out alternate,
+            fade-in 1 5s linear;
+}
+
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slide-right {
+    from {
+        translate: -20vw;
+    }
+    to {
+        translate: 20vw;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        fill-opacity: 0;
+    }
+    to {
+        fill-opacity: 1;
+    }
+}
